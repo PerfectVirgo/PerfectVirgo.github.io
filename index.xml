@@ -6,10 +6,26 @@
     <description>Recent content on 董帅志的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Wed, 01 Apr 2020 00:19:17 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2020 02:03:18 +0800</lastBuildDate>
     
 	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何搭建个人博客</title>
+      <link>http://example.org/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Wed, 01 Apr 2020 02:03:18 +0800</pubDate>
+      
+      <guid>http://example.org/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>如何用hugo搭建个人博客 首先这是hugo官方教程，当然如果你不喜欢看英文的话，那就往下看我的教程吧
+  安装hugo  在https://github.com/gohugoio/hugo/releases里下载安装包并解压验证安装，显示版本号即安装成功
+$ hugo version   建立新网站　 将quickstar替换为你用于存放和上传博客的本地仓库的文件夹名称
+$ hugo new site quickstart   添加主题　 首先，从Github下载默认主题并将其添加到您网站的theme目录中
+$ cd quickstart $ git init $ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 然后，将主题添加到站点配置中
+$ echo &#39;theme = &amp;quot;ananke&amp;quot;&#39; &amp;gt;&amp;gt; config.toml   开始写博客 首先创建一个新.md文件
+$ hugo new posts/my-first-post.md 新创建的文件会从以下内容开始
+--- $ title: &amp;quot;My First Post&amp;quot; $ date: 2019-03-26T08:47:11+01:00 $ draft: true --- 这里要注意写完博客后要把draft: true修改为draft: false，因为draft是草稿的意思</description>
+    </item>
     
     <item>
       <title>第二篇博客</title>

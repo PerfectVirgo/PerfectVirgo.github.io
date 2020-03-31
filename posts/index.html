@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://example.org/posts/" />
-<meta property="og:updated_time" content="2020-04-01T00:19:17+08:00" />
+<meta property="og:updated_time" content="2020-04-01T02:03:18+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -91,6 +91,28 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://example.org/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="link black dim">
+        如何搭建个人博客
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      如何用hugo搭建个人博客 首先这是hugo官方教程，当然如果你不喜欢看英文的话，那就往下看我的教程吧
+  安装hugo  在https://github.com/gohugoio/hugo/releases里下载安装包并解压验证安装，显示版本号即安装成功
+$ hugo version   建立新网站　 将quickstar替换为你用于存放和上传博客的本地仓库的文件夹名称
+$ hugo new site quickstart   添加主题　 首先，从Github下载默认主题并将其添加到您网站的theme目录中
+$ cd quickstart $ git init $ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 然后，将主题添加到站点配置中
+$ echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml   开始写博客 首先创建一个新.md文件
+$ hugo new posts/my-first-post.md 新创建的文件会从以下内容开始
+--- $ title: &quot;My First Post&quot; $ date: 2019-03-26T08:47:11+01:00 $ draft: true --- 这里要注意写完博客后要把draft: true修改为draft: false，因为draft是草稿的意思
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
