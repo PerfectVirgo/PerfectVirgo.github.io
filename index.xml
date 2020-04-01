@@ -6,10 +6,20 @@
     <description>Recent content on 董帅志的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Wed, 01 Apr 2020 02:03:18 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2020 02:09:12 +0800</lastBuildDate>
     
 	<atom:link href="http://dongshuaizhi.top/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HTML入门笔记1</title>
+      <link>http://dongshuaizhi.top/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 02 Apr 2020 02:09:12 +0800</pubDate>
+      
+      <guid>http://dongshuaizhi.top/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
+      <description>1. HTML历史 HTML是在1990年左右诞生,由英国人Tim Berners-Lee发明，与此同时他还发明了HTTP和URL，与HTML共同组成了WWW（万维网）
+2. HTML起手应该写什么 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;!-- 声明文档类型为html --&amp;gt; &amp;lt;html lang=&amp;#34;zh-CN&amp;#34;&amp;gt; &amp;lt;!-- 声明语言为中文-中国 --&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;!-- 声明字符集为UTF-8 --&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;!-- 声明视口禁用缩放，以兼容手机 --&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;ie=edge&amp;#34;&amp;gt; &amp;lt;!-- 声明如果当前页面在IE浏览器里显示，IE请升级成最新的内核 --&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;!-- 页面标题 --&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 3. 常用的章节标签  标题 h1~h6 章节 section 文章 article 段落 p 头部 header 脚部 footer 主要内容 main 旁支内容 aside 划分 div  4. 全局属性   class——给标签分一个类</description>
+    </item>
     
     <item>
       <title>如何搭建个人博客</title>
