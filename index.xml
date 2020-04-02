@@ -6,44 +6,69 @@
     <description>Recent content on 董帅志的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Thu, 02 Apr 2020 02:09:12 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2020 18:17:23 +0800</lastBuildDate>
     
 	<atom:link href="http://dongshuaizhi.top/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>HTML常用标签</title>
+      <link>http://dongshuaizhi.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Thu, 02 Apr 2020 18:17:23 +0800</pubDate>
+      
+      <guid>http://dongshuaizhi.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
+      <description>1. a 标签的用法   href
+取值：
+  网址
+https://google.com
+http://google.com
+//google.com 最高级，它会自动选择是用https还是http
+  路径
+/a/b/c 以及 a/b/c 注意绝对路径开头的/是指http-server的根目录，而不是指硬盘的根目录
+index.html 以及 ./index.html
+  伪协议
+javascript:代码; 用法：当你想点击一个a链接什么都不做的话，就让href=&amp;quot;javascript:;&amp;quot;
+​ 那如果href=&amp;quot;&amp;quot;呢？结果是点击这个a链接页面会刷新
+​ 那如果href=&amp;quot;#&amp;quot;呢？结果是点击这个a链接页面会自动滚到顶部
+mailto:邮箱 会自动跳转到发邮件的界面，并自动填写mailto后面的邮箱
+tel:手机号 会自动跳转到拨号的界面，并自动填写tel后面的手机号
+  id
+#xxx 锚点链接，页面会跳转到指定的标签
+    target
+取值：
+（1）内置名字：
+ _blank _self _top 如果有多级窗口，就在最顶级的窗口打开 _parent 如果有多级窗口，就在其父级窗口打开  （2）程序员命名：
+  window的name,比如xxx
+如果有一个叫xxx的窗口，就用它，如果没有呢，就创建一个窗口，把它叫作xxx
+  iframe的name
+    download</description>
+    </item>
+    
+    <item>
       <title>HTML入门笔记1</title>
-      <link>http://dongshuaizhi.top/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
+      <link>http://dongshuaizhi.top/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</link>
       <pubDate>Thu, 02 Apr 2020 02:09:12 +0800</pubDate>
       
-      <guid>http://dongshuaizhi.top/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>
+      <guid>http://dongshuaizhi.top/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</guid>
       <description>1. HTML历史 HTML是在1990年左右诞生,由英国人Tim Berners-Lee发明，与此同时他还发明了HTTP和URL，与HTML共同组成了WWW（万维网）
 2. HTML起手应该写什么 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;!-- 声明文档类型为html --&amp;gt; &amp;lt;html lang=&amp;#34;zh-CN&amp;#34;&amp;gt; &amp;lt;!-- 声明语言为中文-中国 --&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;!-- 声明字符集为UTF-8 --&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&amp;gt; &amp;lt;!-- 声明视口禁用缩放，以兼容手机 --&amp;gt; &amp;lt;meta http-equiv=&amp;#34;X-UA-Compatible&amp;#34; content=&amp;#34;ie=edge&amp;#34;&amp;gt; &amp;lt;!-- 声明如果当前页面在IE浏览器里显示，IE请升级成最新的内核 --&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;!-- 页面标题 --&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 3. 常用的章节标签  标题 h1~h6 章节 section 文章 article 段落 p 头部 header 脚部 footer 主要内容 main 旁支内容 aside 划分 div  4. 全局属性   class——给标签分一个类</description>
     </item>
     
     <item>
-      <title>如何搭建个人博客</title>
+      <title>如何用hugo搭建个人博客</title>
       <link>http://dongshuaizhi.top/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Wed, 01 Apr 2020 02:03:18 +0800</pubDate>
       
       <guid>http://dongshuaizhi.top/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
-      <description>如何用hugo搭建个人博客 首先这是hugo官方教程，当然如果你不喜欢看英文的话，那就往下看我的教程吧
+      <description>首先这是hugo官方教程，当然如果你不喜欢看英文的话，那就往下看我的教程吧
   安装hugo  在https://github.com/gohugoio/hugo/releases里下载安装包并解压验证安装，显示版本号即安装成功
 $ hugo version   建立新网站　 将quickstar替换为你用于存放和上传博客的本地仓库的文件夹名称
 $ hugo new site quickstart   添加主题　 首先，从Github下载默认主题并将其添加到您网站的theme目录中
 $ cd quickstart $ git init $ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 然后，将主题添加到站点配置中
 $ echo &#39;theme = &amp;quot;ananke&amp;quot;&#39; &amp;gt;&amp;gt; config.toml   开始写博客 首先创建一个新.md文件
 $ hugo new posts/my-first-post.md 新创建的文件会从以下内容开始
---- $ title: &amp;quot;My First Post&amp;quot; $ date: 2019-03-26T08:47:11+01:00 $ draft: true --- 这里要注意写完博客后要把draft: true修改为draft: false，因为draft是草稿的意思</description>
-    </item>
-    
-    <item>
-      <title>第二篇博客</title>
-      <link>http://dongshuaizhi.top/posts/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Wed, 01 Apr 2020 00:19:17 +0800</pubDate>
-      
-      <guid>http://dongshuaizhi.top/posts/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</guid>
-      <description>又见面了 这是第二篇博客</description>
+--- $ title: &amp;quot;My First Post&amp;quot; $ date: 2019-03-26T08:47:11+01:00 $ draft: true --- 这里要注意写完博客后要把draft: true修改为draft: false，因为draft是草稿的意思
+  启动Hugo服务器 $ hugo server -D | EN +------------------+----+ Pages | 10 Paginator pages | 0 Non-page files | 0 Static files | 3 Processed images | 0 Aliases | 1 Sitemaps | 1 Cleaned | 0 Total in 11 ms Watching for changes in /Users/bep/quickstart/{content,data,layouts,static,themes} Watching for config changes in /Users/bep/quickstart/config.</description>
     </item>
     
     <item>
@@ -52,7 +77,7 @@ $ hugo new posts/my-first-post.md 新创建的文件会从以下内容开始
       <pubDate>Wed, 01 Apr 2020 00:03:54 +0800</pubDate>
       
       <guid>http://dongshuaizhi.top/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
-      <description>大家好 我的博客开通啦，希望我能写出好文章给大家看！</description>
+      <description>大家好，我的博客开通啦！</description>
     </item>
     
   </channel>
