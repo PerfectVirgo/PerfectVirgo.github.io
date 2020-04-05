@@ -6,13 +6,120 @@
     <description>Recent content in Posts on 董帅志的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Thu, 02 Apr 2020 18:17:23 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2020 20:57:30 +0800</lastBuildDate>
     
 	<atom:link href="http://dongshuaizhi.top/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>HTML常用标签</title>
+      <title>CSS动画</title>
+      <link>http://dongshuaizhi.top/posts/css%E5%8A%A8%E7%94%BB/</link>
+      <pubDate>Sun, 05 Apr 2020 20:57:30 +0800</pubDate>
+      
+      <guid>http://dongshuaizhi.top/posts/css%E5%8A%A8%E7%94%BB/</guid>
+      <description>1. 动画   定义
+由许多静止的画面（帧）
+以一定的速度（如每秒30张）连续播放时
+肉眼因视觉残象产生错觉
+而误以为是活动的画面
+  概念
+帧：每个静止的画面都叫做帧
+播放速度：每秒 24 帧（影视） 或者每秒 30 帧（游戏）
+  一个最简单的例子
+  将 div 从左往右移动
+代码
+  原理
+每过一段时间（用 setInterval 做到）
+将 div 移动一小段距离
+直到移动到目标地点
+  注意性能
+绿色表示重新绘制（repaint）了
+CSS 渲染过程依次包含布局、绘制、合成
+其中布局和绘制有可能被省略
+    前端高手不用 left 做动画
+  用 transform（变形）
+代码
+  原理
+transform: translateX(0 =&amp;gt; 300px)
+直接修改会被合成，需要等一会修改
+transition 过渡属性可以自动脑补中间帧
+  注意性能</description>
+    </item>
+    
+    <item>
+      <title>CSS定位</title>
+      <link>http://dongshuaizhi.top/posts/css%E5%AE%9A%E4%BD%8D/</link>
+      <pubDate>Sun, 05 Apr 2020 20:56:45 +0800</pubDate>
+      
+      <guid>http://dongshuaizhi.top/posts/css%E5%AE%9A%E4%BD%8D/</guid>
+      <description>1. 盒模型 Q：背景的范围是从哪到哪？（B）
+ A. border 内边沿围成的区域 B. border 外边沿围成的区域 如何验证自己的猜想？border 半透明试试  Q：从左边看一个 div，是什么样子？
+2. 新属性 - position   position
+static 默认值，待在文档流里
+relative 相对定位，升起来，但不脱离文档流
+absolute 绝对定位，定位基准是祖先里的非 static
+fixed 固定定位，定位基准是 viewport （有诈）
+sticky 粘滞定位，不好描述直接举例
+  经验
+如果你写了 absolute，一般都得补一个 relative
+如果你写了 absolute 或 fixed，一定要补 top 和 left
+sticky 兼容性很差，主要用于面试装逼
+  position: relative
+  使用场景
+用于做位移 （很少用）
+用于给 absolute 元素做爸爸（子绝父相）
+  配合 z-index
+z-index: auto 默认值，不创建新层叠上下文
+z-index: 0 / 1 / 2</description>
+    </item>
+    
+    <item>
+      <title>CSS布局</title>
+      <link>http://dongshuaizhi.top/posts/css%E5%B8%83%E5%B1%80/</link>
+      <pubDate>Sun, 05 Apr 2020 20:55:55 +0800</pubDate>
+      
+      <guid>http://dongshuaizhi.top/posts/css%E5%B8%83%E5%B1%80/</guid>
+      <description>1. 布局分类   两种
+固定宽度布局，一般宽度为 960 / 1000 / 1024 px
+不固定宽度布局，主要靠文档流的原理来布局
+  还记得吗
+文档流本来就是自适应的，不需要加额外的样式
+  第三种布局
+响应式布局
+意思就是PC上固定宽度，手机上不固定宽度，也就是一种混合布局
+  2. float 布局   步骤
+子元素上加 float: left 和 width
+在父元素上加 .clearfix
+  经验
+有经验者会留一些空间或者最后一个不设 width
+不需要做响应式，因为手机上没有 IE ，而这个布局是专门为 IE 准备的
+IE 6/7 存在双倍 margin bug ，解决办法有两个
+ 一是将错就错，针对 IE 6/7 把 margin 减半，_margin-left: 5px; 二是神来一笔，再加一个 display: inline-block    不同布局
+用 float 做两栏布局 （如顶部条）</description>
+    </item>
+    
+    <item>
+      <title>CSS概述</title>
+      <link>http://dongshuaizhi.top/posts/css%E6%A6%82%E8%BF%B0/</link>
+      <pubDate>Sun, 05 Apr 2020 20:52:22 +0800</pubDate>
+      
+      <guid>http://dongshuaizhi.top/posts/css%E6%A6%82%E8%BF%B0/</guid>
+      <description>1. CSS层叠样式表，层叠指什么？   样式层叠
+可以多次对同一选择器进行样式声明
+  选择器层叠
+可以用不同选择器对同一个元素进行样式声明
+  文件层叠
+可以用多个文件进行层叠
+  这些特性使得CSS极度灵活
+这也为CSS后来被吐槽留下了隐患
+  2. 语法   语法一：样式语法
+选择器 {属性名: 属性值;/*注释*/}  语法二：at语法
+@charset &amp;#34;UTF-8&amp;#34;; /*声名字符编码*/@import url(2.css); /*导入一个额外的CSS文件*/@media (min-width: 100px) and (max-width: 200px) { /*媒体查询*/语法一}注意事项：
+ @charset 必须放在第一行 前两个 at 语法必须以分号 ; 结尾 @media 语法后面填坑 charset 是字符集的意思，但 UTF-8 是字符编码encoding，这是历史遗留问题    3. 文档流 Normal Flow   文档流</description>
+    </item>
+    
+    <item>
+      <title>HTML重点标签</title>
       <link>http://dongshuaizhi.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
       <pubDate>Thu, 02 Apr 2020 18:17:23 +0800</pubDate>
       
@@ -45,7 +152,7 @@ tel:手机号 会自动跳转到拨号的界面，并自动填写tel后面的手
     </item>
     
     <item>
-      <title>HTML入门笔记1</title>
+      <title>HTML概述</title>
       <link>http://dongshuaizhi.top/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</link>
       <pubDate>Thu, 02 Apr 2020 02:09:12 +0800</pubDate>
       

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>董帅志的博客  | CSS定位</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.68.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="CSS定位" />
+<meta property="og:description" content="1. 盒模型 Q：背景的范围是从哪到哪？（B）
+ A. border 内边沿围成的区域 B. border 外边沿围成的区域 如何验证自己的猜想？border 半透明试试  Q：从左边看一个 div，是什么样子？
+2. 新属性 - position   position
+static 默认值，待在文档流里
+relative 相对定位，升起来，但不脱离文档流
+absolute 绝对定位，定位基准是祖先里的非 static
+fixed 固定定位，定位基准是 viewport （有诈）
+sticky 粘滞定位，不好描述直接举例
+  经验
+如果你写了 absolute，一般都得补一个 relative
+如果你写了 absolute 或 fixed，一定要补 top 和 left
+sticky 兼容性很差，主要用于面试装逼
+  position: relative
+  使用场景
+用于做位移 （很少用）
+用于给 absolute 元素做爸爸（子绝父相）
+  配合 z-index
+z-index: auto 默认值，不创建新层叠上下文
+z-index: 0 / 1 / 2" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dongshuaizhi.top/posts/css%E5%AE%9A%E4%BD%8D/" />
+<meta property="article:published_time" content="2020-04-05T20:56:45+08:00" />
+<meta property="article:modified_time" content="2020-04-05T20:56:45+08:00" />
+<meta itemprop="name" content="CSS定位">
+<meta itemprop="description" content="1. 盒模型 Q：背景的范围是从哪到哪？（B）
+ A. border 内边沿围成的区域 B. border 外边沿围成的区域 如何验证自己的猜想？border 半透明试试  Q：从左边看一个 div，是什么样子？
+2. 新属性 - position   position
+static 默认值，待在文档流里
+relative 相对定位，升起来，但不脱离文档流
+absolute 绝对定位，定位基准是祖先里的非 static
+fixed 固定定位，定位基准是 viewport （有诈）
+sticky 粘滞定位，不好描述直接举例
+  经验
+如果你写了 absolute，一般都得补一个 relative
+如果你写了 absolute 或 fixed，一定要补 top 和 left
+sticky 兼容性很差，主要用于面试装逼
+  position: relative
+  使用场景
+用于做位移 （很少用）
+用于给 absolute 元素做爸爸（子绝父相）
+  配合 z-index
+z-index: auto 默认值，不创建新层叠上下文
+z-index: 0 / 1 / 2">
+<meta itemprop="datePublished" content="2020-04-05T20:56:45&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-05T20:56:45&#43;08:00" />
+<meta itemprop="wordCount" content="161">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS定位"/>
+<meta name="twitter:description" content="1. 盒模型 Q：背景的范围是从哪到哪？（B）
+ A. border 内边沿围成的区域 B. border 外边沿围成的区域 如何验证自己的猜想？border 半透明试试  Q：从左边看一个 div，是什么样子？
+2. 新属性 - position   position
+static 默认值，待在文档流里
+relative 相对定位，升起来，但不脱离文档流
+absolute 绝对定位，定位基准是祖先里的非 static
+fixed 固定定位，定位基准是 viewport （有诈）
+sticky 粘滞定位，不好描述直接举例
+  经验
+如果你写了 absolute，一般都得补一个 relative
+如果你写了 absolute 或 fixed，一定要补 top 和 left
+sticky 兼容性很差，主要用于面试装逼
+  position: relative
+  使用场景
+用于做位移 （很少用）
+用于给 absolute 元素做爸爸（子绝父相）
+  配合 z-index
+z-index: auto 默认值，不创建新层叠上下文
+z-index: 0 / 1 / 2"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://dongshuaizhi.top/" class="f3 fw2 hover-white no-underline white-90 dib">
+      董帅志的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=http://dongshuaizhi.top/posts/css%E5%AE%9A%E4%BD%8D/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=http://dongshuaizhi.top/posts/css%E5%AE%9A%E4%BD%8D/&amp;text=CSS%e5%ae%9a%e4%bd%8d" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://dongshuaizhi.top/posts/css%E5%AE%9A%E4%BD%8D/&amp;title=CSS%e5%ae%9a%e4%bd%8d" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+      <h1 class="f1 athelas mt3 mb1">CSS定位</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-04-05T20:56:45&#43;08:00">April 5, 2020</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="1-盒模型">1. 盒模型</h2>
+<p><img src="https://i.loli.net/2020/04/04/fratoLsp8ulvJby.png" alt="盒模型.png"></p>
+<p>Q：背景的范围是从哪到哪？（B）</p>
+<ul>
+<li>A. border 内边沿围成的区域</li>
+<li>B. border 外边沿围成的区域</li>
+<li>如何验证自己的猜想？border 半透明试试</li>
+</ul>
+<p>Q：从左边看一个 div，是什么样子？</p>
+<p><img src="https://i.loli.net/2020/04/04/Vo9BQ2f4GeAlYmF.png" alt="div分层.png"></p>
+<h2 id="2-新属性---position">2. 新属性 - position</h2>
+<ul>
+<li>
+<p>position</p>
+<p>static 默认值，待在文档流里</p>
+<p>relative 相对定位，升起来，但不脱离文档流</p>
+<p>absolute 绝对定位，定位基准是祖先里的非 static</p>
+<p>fixed 固定定位，定位基准是 viewport （有诈）</p>
+<p>sticky 粘滞定位，不好描述直接举例</p>
+</li>
+<li>
+<p>经验</p>
+<p>如果你写了 absolute，一般都得补一个 relative</p>
+<p>如果你写了 absolute 或 fixed，一定要补 top 和 left</p>
+<p>sticky 兼容性很差，主要用于面试装逼</p>
+</li>
+<li>
+<p>position: relative</p>
+<ul>
+<li>
+<p>使用场景</p>
+<p>用于做位移 （很少用）</p>
+<p>用于给 absolute 元素做爸爸（子绝父相）</p>
+</li>
+<li>
+<p>配合 z-index</p>
+<p>z-index: auto 默认值，不创建新层叠上下文</p>
+<p>z-index: 0 / 1 / 2</p>
+<p>z-index: -1 / -2</p>
+</li>
+<li>
+<p>经验</p>
+<p>写 z-index: 9999 的都是彩笔</p>
+<p>学会管理 z-index</p>
+</li>
+</ul>
+</li>
+<li>
+<p>position: absolute</p>
+<ul>
+<li>
+<p>使用场景</p>
+<p>脱离原来的位置，另起一层，比如对话框的关闭按钮</p>
+<p>鼠标提示</p>
+</li>
+<li>
+<p>配合 z-index</p>
+</li>
+<li>
+<p>经验</p>
+<p>很多彩笔都以为 absolute 是相对于 relative 定位的</p>
+<p>某些浏览器上如果不写 top / left 会位置错乱</p>
+<p>善用 left: 100%</p>
+<p>善用 left: 50%; 加负 margin</p>
+</li>
+</ul>
+</li>
+<li>
+<p>position: fixed</p>
+<ul>
+<li>
+<p>使用场景</p>
+<p>烦人的广告</p>
+<p>回到顶部按钮</p>
+</li>
+<li>
+<p>配合 z-index</p>
+</li>
+<li>
+<p>经验</p>
+<p>不要把 fixed 的元素放到有 transform 属性的元素的里面，会产生奇怪的反应</p>
+<p>手机上尽量不要用这个属性，坑很多</p>
+<p>不信你搜索一下【移动端 fixed】</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-层叠上下文">3. 层叠上下文</h2>
+<p>Q：z-index: 10 和 z-index: 5 哪个高？ （D）</p>
+<p>A. 前者高  B. 后者高  C. 一样高  D. 看情况</p>
+<ul>
+<li>
+<p>比喻</p>
+<p>每个层叠上下文就是一个新的小世界（作用域）</p>
+<p>这个小世界里面的 z-index 跟外界无关</p>
+<p>处在同一个小世界里的 z-index 才能比较</p>
+<p><a href="http://js.jirengu.com/gewob/1/edit?html,css,output">例子</a></p>
+</li>
+<li>
+<p>哪些不正交的属性可以创建它</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context">MDN 文档</a>有写</p>
+<p>需要记忆的有 z-index / fixed / flex / opacity / transform</p>
+</li>
+<li>
+<p>负 z-index 与层叠上下文</p>
+<p>记住负 z-index <a href="http://js.jirengu.com/modez/1/edit?html,css,output">逃不出</a>小世界</p>
+</li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://dongshuaizhi.top/" >
+    &copy;  董帅志的博客 2020 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://dongshuaizhi.top/" />
-<meta property="og:updated_time" content="2020-04-02T18:17:23+08:00" />
+<meta property="og:updated_time" content="2020-04-05T20:57:30+08:00" />
 <meta itemprop="name" content="董帅志的博客">
 <meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="董帅志的博客"/>
@@ -122,38 +122,40 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://dongshuaizhi.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" class="color-inherit dim link">
-            HTML常用标签
+          <a href="http://dongshuaizhi.top/posts/css%E5%8A%A8%E7%94%BB/" class="color-inherit dim link">
+            CSS动画
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          1. a 标签的用法   href
-取值：
-  网址
-https://google.com
-http://google.com
-//google.com 最高级，它会自动选择是用https还是http
-  路径
-/a/b/c 以及 a/b/c 注意绝对路径开头的/是指http-server的根目录，而不是指硬盘的根目录
-index.html 以及 ./index.html
-  伪协议
-javascript:代码; 用法：当你想点击一个a链接什么都不做的话，就让href=&quot;javascript:;&quot;
-​ 那如果href=&quot;&quot;呢？结果是点击这个a链接页面会刷新
-​ 那如果href=&quot;#&quot;呢？结果是点击这个a链接页面会自动滚到顶部
-mailto:邮箱 会自动跳转到发邮件的界面，并自动填写mailto后面的邮箱
-tel:手机号 会自动跳转到拨号的界面，并自动填写tel后面的手机号
-  id
-#xxx 锚点链接，页面会跳转到指定的标签
-    target
-取值：
-（1）内置名字：
- _blank _self _top 如果有多级窗口，就在最顶级的窗口打开 _parent 如果有多级窗口，就在其父级窗口打开  （2）程序员命名：
-  window的name,比如xxx
-如果有一个叫xxx的窗口，就用它，如果没有呢，就创建一个窗口，把它叫作xxx
-  iframe的name
-    download
+          1. 动画   定义
+由许多静止的画面（帧）
+以一定的速度（如每秒30张）连续播放时
+肉眼因视觉残象产生错觉
+而误以为是活动的画面
+  概念
+帧：每个静止的画面都叫做帧
+播放速度：每秒 24 帧（影视） 或者每秒 30 帧（游戏）
+  一个最简单的例子
+  将 div 从左往右移动
+代码
+  原理
+每过一段时间（用 setInterval 做到）
+将 div 移动一小段距离
+直到移动到目标地点
+  注意性能
+绿色表示重新绘制（repaint）了
+CSS 渲染过程依次包含布局、绘制、合成
+其中布局和绘制有可能被省略
+    前端高手不用 left 做动画
+  用 transform（变形）
+代码
+  原理
+transform: translateX(0 =&gt; 300px)
+直接修改会被合成，需要等一会修改
+transition 过渡属性可以自动脑补中间帧
+  注意性能
         </div>
-          <a href="http://dongshuaizhi.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://dongshuaizhi.top/posts/css%E5%8A%A8%E7%94%BB/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -170,15 +172,32 @@ tel:手机号 会自动跳转到拨号的界面，并自动填写tel后面的手
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://dongshuaizhi.top/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/" class="color-inherit dim link">
-            HTML入门笔记1
+          <a href="http://dongshuaizhi.top/posts/css%E5%AE%9A%E4%BD%8D/" class="color-inherit dim link">
+            CSS定位
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          1. HTML历史 HTML是在1990年左右诞生,由英国人Tim Berners-Lee发明，与此同时他还发明了HTTP和URL，与HTML共同组成了WWW（万维网）
-2. HTML起手应该写什么 &lt;!DOCTYPE html&gt; &lt;!-- 声明文档类型为html --&gt; &lt;html lang=&#34;zh-CN&#34;&gt; &lt;!-- 声明语言为中文-中国 --&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;!-- 声明字符集为UTF-8 --&gt; &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt; &lt;!-- 声明视口禁用缩放，以兼容手机 --&gt; &lt;meta http-equiv=&#34;X-UA-Compatible&#34; content=&#34;ie=edge&#34;&gt; &lt;!-- 声明如果当前页面在IE浏览器里显示，IE请升级成最新的内核 --&gt; &lt;title&gt;Document&lt;/title&gt; &lt;!-- 页面标题 --&gt; &lt;/head&gt; &lt;body&gt; &lt;/body&gt; &lt;/html&gt; 3. 常用的章节标签  标题 h1~h6 章节 section 文章 article 段落 p 头部 header 脚部 footer 主要内容 main 旁支内容 aside 划分 div  4. 全局属性   class——给标签分一个类
+          1. 盒模型 Q：背景的范围是从哪到哪？（B）
+ A. border 内边沿围成的区域 B. border 外边沿围成的区域 如何验证自己的猜想？border 半透明试试  Q：从左边看一个 div，是什么样子？
+2. 新属性 - position   position
+static 默认值，待在文档流里
+relative 相对定位，升起来，但不脱离文档流
+absolute 绝对定位，定位基准是祖先里的非 static
+fixed 固定定位，定位基准是 viewport （有诈）
+sticky 粘滞定位，不好描述直接举例
+  经验
+如果你写了 absolute，一般都得补一个 relative
+如果你写了 absolute 或 fixed，一定要补 top 和 left
+sticky 兼容性很差，主要用于面试装逼
+  position: relative
+  使用场景
+用于做位移 （很少用）
+用于给 absolute 元素做爸爸（子绝父相）
+  配合 z-index
+z-index: auto 默认值，不创建新层叠上下文
+z-index: 0 / 1 / 2
         </div>
-          <a href="http://dongshuaizhi.top/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://dongshuaizhi.top/posts/css%E5%AE%9A%E4%BD%8D/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -195,22 +214,30 @@ tel:手机号 会自动跳转到拨号的界面，并自动填写tel后面的手
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://dongshuaizhi.top/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="color-inherit dim link">
-            如何用hugo搭建个人博客
+          <a href="http://dongshuaizhi.top/posts/css%E5%B8%83%E5%B1%80/" class="color-inherit dim link">
+            CSS布局
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          首先这是hugo官方教程，当然如果你不喜欢看英文的话，那就往下看我的教程吧
-  安装hugo  在https://github.com/gohugoio/hugo/releases里下载安装包并解压验证安装，显示版本号即安装成功
-$ hugo version   建立新网站　 将quickstar替换为你用于存放和上传博客的本地仓库的文件夹名称
-$ hugo new site quickstart   添加主题　 首先，从Github下载默认主题并将其添加到您网站的theme目录中
-$ cd quickstart $ git init $ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 然后，将主题添加到站点配置中
-$ echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml   开始写博客 首先创建一个新.md文件
-$ hugo new posts/my-first-post.md 新创建的文件会从以下内容开始
---- $ title: &quot;My First Post&quot; $ date: 2019-03-26T08:47:11+01:00 $ draft: true --- 这里要注意写完博客后要把draft: true修改为draft: false，因为draft是草稿的意思
-  启动Hugo服务器 $ hugo server -D | EN +------------------+----+ Pages | 10 Paginator pages | 0 Non-page files | 0 Static files | 3 Processed images | 0 Aliases | 1 Sitemaps | 1 Cleaned | 0 Total in 11 ms Watching for changes in /Users/bep/quickstart/{content,data,layouts,static,themes} Watching for config changes in /Users/bep/quickstart/config.
+          1. 布局分类   两种
+固定宽度布局，一般宽度为 960 / 1000 / 1024 px
+不固定宽度布局，主要靠文档流的原理来布局
+  还记得吗
+文档流本来就是自适应的，不需要加额外的样式
+  第三种布局
+响应式布局
+意思就是PC上固定宽度，手机上不固定宽度，也就是一种混合布局
+  2. float 布局   步骤
+子元素上加 float: left 和 width
+在父元素上加 .clearfix
+  经验
+有经验者会留一些空间或者最后一个不设 width
+不需要做响应式，因为手机上没有 IE ，而这个布局是专门为 IE 准备的
+IE 6/7 存在双倍 margin bug ，解决办法有两个
+ 一是将错就错，针对 IE 6/7 把 margin 减半，_margin-left: 5px; 二是神来一笔，再加一个 display: inline-block    不同布局
+用 float 做两栏布局 （如顶部条）
         </div>
-          <a href="http://dongshuaizhi.top/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://dongshuaizhi.top/posts/css%E5%B8%83%E5%B1%80/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -227,8 +254,26 @@ $ hugo new posts/my-first-post.md 新创建的文件会从以下内容开始
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://dongshuaizhi.top/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/" class="link black dim">
-              开博大吉
+            <a href="http://dongshuaizhi.top/posts/css%E6%A6%82%E8%BF%B0/" class="link black dim">
+              CSS概述
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://dongshuaizhi.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" class="link black dim">
+              HTML重点标签
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://dongshuaizhi.top/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/" class="link black dim">
+              HTML概述
+            </a>
+          </h2>
+        
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="http://dongshuaizhi.top/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="link black dim">
+              如何用hugo搭建个人博客
             </a>
           </h2>
         

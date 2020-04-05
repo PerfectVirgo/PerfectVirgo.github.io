@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>董帅志的博客  | CSS动画</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.68.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="CSS动画" />
+<meta property="og:description" content="1. 动画   定义
+由许多静止的画面（帧）
+以一定的速度（如每秒30张）连续播放时
+肉眼因视觉残象产生错觉
+而误以为是活动的画面
+  概念
+帧：每个静止的画面都叫做帧
+播放速度：每秒 24 帧（影视） 或者每秒 30 帧（游戏）
+  一个最简单的例子
+  将 div 从左往右移动
+代码
+  原理
+每过一段时间（用 setInterval 做到）
+将 div 移动一小段距离
+直到移动到目标地点
+  注意性能
+绿色表示重新绘制（repaint）了
+CSS 渲染过程依次包含布局、绘制、合成
+其中布局和绘制有可能被省略
+    前端高手不用 left 做动画
+  用 transform（变形）
+代码
+  原理
+transform: translateX(0 =&gt; 300px)
+直接修改会被合成，需要等一会修改
+transition 过渡属性可以自动脑补中间帧
+  注意性能" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dongshuaizhi.top/posts/css%E5%8A%A8%E7%94%BB/" />
+<meta property="article:published_time" content="2020-04-05T20:57:30+08:00" />
+<meta property="article:modified_time" content="2020-04-05T20:57:30+08:00" />
+<meta itemprop="name" content="CSS动画">
+<meta itemprop="description" content="1. 动画   定义
+由许多静止的画面（帧）
+以一定的速度（如每秒30张）连续播放时
+肉眼因视觉残象产生错觉
+而误以为是活动的画面
+  概念
+帧：每个静止的画面都叫做帧
+播放速度：每秒 24 帧（影视） 或者每秒 30 帧（游戏）
+  一个最简单的例子
+  将 div 从左往右移动
+代码
+  原理
+每过一段时间（用 setInterval 做到）
+将 div 移动一小段距离
+直到移动到目标地点
+  注意性能
+绿色表示重新绘制（repaint）了
+CSS 渲染过程依次包含布局、绘制、合成
+其中布局和绘制有可能被省略
+    前端高手不用 left 做动画
+  用 transform（变形）
+代码
+  原理
+transform: translateX(0 =&gt; 300px)
+直接修改会被合成，需要等一会修改
+transition 过渡属性可以自动脑补中间帧
+  注意性能">
+<meta itemprop="datePublished" content="2020-04-05T20:57:30&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-05T20:57:30&#43;08:00" />
+<meta itemprop="wordCount" content="469">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS动画"/>
+<meta name="twitter:description" content="1. 动画   定义
+由许多静止的画面（帧）
+以一定的速度（如每秒30张）连续播放时
+肉眼因视觉残象产生错觉
+而误以为是活动的画面
+  概念
+帧：每个静止的画面都叫做帧
+播放速度：每秒 24 帧（影视） 或者每秒 30 帧（游戏）
+  一个最简单的例子
+  将 div 从左往右移动
+代码
+  原理
+每过一段时间（用 setInterval 做到）
+将 div 移动一小段距离
+直到移动到目标地点
+  注意性能
+绿色表示重新绘制（repaint）了
+CSS 渲染过程依次包含布局、绘制、合成
+其中布局和绘制有可能被省略
+    前端高手不用 left 做动画
+  用 transform（变形）
+代码
+  原理
+transform: translateX(0 =&gt; 300px)
+直接修改会被合成，需要等一会修改
+transition 过渡属性可以自动脑补中间帧
+  注意性能"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://dongshuaizhi.top/" class="f3 fw2 hover-white no-underline white-90 dib">
+      董帅志的博客
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=http://dongshuaizhi.top/posts/css%E5%8A%A8%E7%94%BB/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=http://dongshuaizhi.top/posts/css%E5%8A%A8%E7%94%BB/&amp;text=CSS%e5%8a%a8%e7%94%bb" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://dongshuaizhi.top/posts/css%E5%8A%A8%E7%94%BB/&amp;title=CSS%e5%8a%a8%e7%94%bb" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+      <h1 class="f1 athelas mt3 mb1">CSS动画</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-04-05T20:57:30&#43;08:00">April 5, 2020</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="1-动画">1. 动画</h2>
+<ul>
+<li>
+<p>定义</p>
+<p>由许多静止的画面（帧）</p>
+<p>以一定的速度（如每秒30张）连续播放时</p>
+<p>肉眼因视觉残象产生错觉</p>
+<p>而误以为是活动的画面</p>
+</li>
+<li>
+<p>概念</p>
+<p>帧：每个静止的画面都叫做帧</p>
+<p>播放速度：每秒 24 帧（影视） 或者每秒 30 帧（游戏）</p>
+</li>
+<li>
+<p>一个最简单的例子</p>
+<ul>
+<li>
+<p>将 div 从左往右移动</p>
+<p><a href="http://js.jirengu.com/bagow/1/edit?html,js,output">代码</a></p>
+</li>
+<li>
+<p>原理</p>
+<p>每过一段时间（用 setInterval 做到）</p>
+<p>将 div 移动一小段距离</p>
+<p>直到移动到目标地点</p>
+</li>
+<li>
+<p>注意性能</p>
+<p>绿色表示重新绘制（repaint）了</p>
+<p>CSS 渲染过程依次包含布局、绘制、合成</p>
+<p>其中布局和绘制有可能被省略</p>
+</li>
+</ul>
+</li>
+<li>
+<p>前端高手不用 left 做动画</p>
+<ul>
+<li>
+<p>用 transform（变形）</p>
+<p><a href="http://js.jirengu.com/lojiz/1/edit?html,css,js,output">代码</a></p>
+</li>
+<li>
+<p>原理</p>
+<p>transform: translateX(0 =&gt; 300px)</p>
+<p>直接修改会被合成，需要等一会修改</p>
+<p>transition 过渡属性可以自动脑补中间帧</p>
+</li>
+<li>
+<p>注意性能</p>
+<p>并没有 relayout 以及 repaint（重新绘制）</p>
+<p>比改 left 性能好</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-浏览器渲染原理">2. 浏览器渲染原理</h2>
+<ul>
+<li>
+<p>参考文章</p>
+<ul>
+<li>
+<p>Google 团队写的文章（右上角中文）</p>
+<p><a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction">渲染树构建、布局及绘制</a></p>
+<p><a href="https://developers.google.com/web/fundamentals/performance/rendering/">渲染性能</a></p>
+<p><a href="https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count">使用 transform 来实现动画</a></p>
+</li>
+<li>
+<p>查看 CSS 各属性触发什么</p>
+<p><a href="https://csstriggers.com/">CSSTriggers.com</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>浏览器渲染过程</p>
+<p>根据 HTML 构建 HTML 树（DOM）</p>
+<p>根据 CSS 构建 CSS 树（CSSOM）</p>
+<p>将两棵树合并成一颗渲染树（render tree）</p>
+<p>Layout 布局（文档流、盒模型、计算大小和位置）</p>
+<p>Paint 绘制（把边框颜色、文字颜色、阴影等画出来）</p>
+<p>Composite 合成（根据层叠关系展示画面）</p>
+<p><img src="https://i.loli.net/2020/04/05/E7gzLpFoGBPJa1T.png" alt="渲染树.png"></p>
+</li>
+<li>
+<p>如何更新样式</p>
+<ul>
+<li>
+<p>一般我们用 JS 来更新样式</p>
+<p>比如 <code>div.style.background='red'</code></p>
+<p>比如 <code>div.style.display='none'</code></p>
+<p>比如 <code>div.classList.add=('red')</code></p>
+<p>比如 <code>div.remove()</code> 直接删掉节点</p>
+</li>
+<li>
+<p>那么这些方法有什么不同吗</p>
+<p>有三种不同的渲染方式</p>
+<p><img src="https://i.loli.net/2020/04/05/mzclvKx7QUefYMX.png" alt="更新方式.png"></p>
+</li>
+</ul>
+</li>
+<li>
+<p>三种更新方式</p>
+<ul>
+<li>
+<p>第一种，全走</p>
+<p><a href="http://js.jirengu.com/jagel/1/edit?html,css,js,output">div.remove()</a> 会触发当前消失，其他元素 relayout</p>
+</li>
+<li>
+<p>第二种，跳过 layout</p>
+<p><a href="http://js.jirengu.com/jidam/1/edit?html,css,js,output">改变背景颜色</a>，直接 repaint + composite</p>
+</li>
+<li>
+<p>第三种，跳过 layout 和 paint</p>
+<p><a href="http://js.jirengu.com/wusew/1">改变 transform</a>，只需 composite</p>
+<p>注意必须全屏查看效果，在 iframe 里看有问题</p>
+</li>
+</ul>
+</li>
+<li>
+<p>CSS 动画优化</p>
+<ul>
+<li>
+<p>没什么技术含量</p>
+<p>答案都在<a href="https://developers.google.com/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count">Google 写的文章</a>里，谁看完谁牛 X</p>
+</li>
+<li>
+<p>JS 优化</p>
+<p>使用 requestAnimationFrame 代替 setTimeout 或 setInterval</p>
+</li>
+<li>
+<p>CSS 优化</p>
+<p>使用 will-change 或 translate</p>
+</li>
+<li>
+<p>没错</p>
+<p>完全就是死记硬背</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-transform">3. transform</h2>
+<ul>
+<li>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform">MDN 文档</a></p>
+</li>
+<li>
+<p>四个常用功能</p>
+<p>位移 translate</p>
+<p>缩放 scale</p>
+<p>旋转 rotate</p>
+<p>倾斜 skew</p>
+</li>
+<li>
+<p>经验</p>
+<p>一般都需要配合 transition 过渡</p>
+<p>inline 元素不支持 transform，需要先变成 block</p>
+</li>
+<li>
+<p>transform 之 translate</p>
+<ul>
+<li>
+<p>常用写法</p>
+<p>translateX( <!-- raw HTML omitted --> )</p>
+<p>translateY( <!-- raw HTML omitted --> )</p>
+<p>translate( <!-- raw HTML omitted --> , <!-- raw HTML omitted -->? )</p>
+<p>translateZ( <!-- raw HTML omitted --> ) 且父容器 perspective</p>
+<p>translate3d(x, y, z)</p>
+<p><a href="http://js.jirengu.com/xidiy/1/edit?html,css,output">示例</a></p>
+</li>
+<li>
+<p>经验</p>
+<p>要学会看懂 MDN 的语法示例</p>
+<p>translate(-50%,-50%) 可做绝对定位元素的居中</p>
+</li>
+</ul>
+</li>
+<li>
+<p>transform 之 scale</p>
+<ul>
+<li>
+<p>常用写法</p>
+<p>scaleX( <!-- raw HTML omitted --> )</p>
+<p>scaleY( <!-- raw HTML omitted --> )</p>
+<p>scale( <!-- raw HTML omitted --> , <!-- raw HTML omitted -->? )</p>
+<p><a href="http://js.jirengu.com/jucal/1/edit?html,css,output">示例</a></p>
+</li>
+<li>
+<p>经验</p>
+<p>用的较少，因为容易出现模糊</p>
+</li>
+</ul>
+</li>
+<li>
+<p>transform 之 rotate</p>
+<ul>
+<li>
+<p>常用写法</p>
+<p>rotate( [ <!-- raw HTML omitted --> | <!-- raw HTML omitted --> ] )</p>
+<p>rotateZ( [ <!-- raw HTML omitted --> | <!-- raw HTML omitted --> ] )</p>
+<p>rotateX( [ <!-- raw HTML omitted --> | <!-- raw HTML omitted --> ] )</p>
+<p>rotateY( [ <!-- raw HTML omitted --> | <!-- raw HTML omitted --> ] )</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform-function/rotate3d">rotate3d</a> 太复杂，无法用语言表述</p>
+<p><a href="http://js.jirengu.com/jiquq/1/edit?html,css,output">示例</a></p>
+</li>
+<li>
+<p>经验</p>
+<p>一般用于 360 度旋转制作 loading</p>
+<p>用到时再搜索 rotate MDN 看文档</p>
+</li>
+</ul>
+</li>
+<li>
+<p>transform 之 skew</p>
+<ul>
+<li>
+<p>常用写法</p>
+<p>skewX( [ <!-- raw HTML omitted --> | <!-- raw HTML omitted --> ] )</p>
+<p>skewY( [ <!-- raw HTML omitted --> | <!-- raw HTML omitted --> ] )</p>
+<p>skew( [ <!-- raw HTML omitted --> | <!-- raw HTML omitted --> ] , [ <!-- raw HTML omitted --> | <!-- raw HTML omitted --> ]? )</p>
+<p><a href="http://js.jirengu.com/tazer/1/edit?html,css,output">示例</a></p>
+</li>
+<li>
+<p>经验</p>
+<p>用的较少</p>
+<p>用到时再搜 skew MDN 文档</p>
+</li>
+</ul>
+</li>
+<li>
+<p>transform 多重效果</p>
+<ul>
+<li>
+<p>组合使用</p>
+<p><code>transform: scale(0.5) translate(-100%, -100%);</code></p>
+<p><code>transform: none;</code> 取消所有</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-transition">4. transition</h2>
+<ul>
+<li>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform">MDN 文档</a></p>
+</li>
+<li>
+<p>作用</p>
+<p>补充中间帧</p>
+</li>
+<li>
+<p>语法</p>
+<p>transition: 属性名 时长 过渡方式 延迟</p>
+<p><code>transition: left 200ms linear</code></p>
+<p>可以用逗号分隔两个不同属性</p>
+<p><code>transition: left 200ms, top 400ms</code></p>
+<p>可以用 all 代表所有属性</p>
+<p><code>transition: all 200ms</code></p>
+<p>过渡方式有：linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier | step-start | step-end | steps，<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function">具体含义</a>要靠数学知识</p>
+</li>
+<li>
+<p>注意</p>
+<ul>
+<li>
+<p>并不是所有属性都能过渡</p>
+<p>display: none =&gt; block 没法过渡</p>
+<p>一般改成 visibility: hidden =&gt; visible（没有为什么）</p>
+<p>background 颜色可以过渡吗？（可以）</p>
+<p>opacity 透明度可以过渡吗？（可以）</p>
+</li>
+<li>
+<p>让一个盒子消失的三种过渡方案对比，均设置为<code>transition: all 5s;</code></p>
+<p>A. 由 <code>display: block</code> 过渡为 <code>display: none</code></p>
+<p>​	结果：盒子会在第一秒就立即消失，没有过渡效果，消失后不占位置</p>
+<p>B. 由 <code>visibility: visible</code> 过渡为 <code>visibility: hidden</code></p>
+<p>​	结果：盒子会在最后一秒立即消失，没有过渡效果，消失后继续占位置</p>
+<p>C. 由 <code>opacity: 1</code> 过渡为 <code>opacity: 0</code></p>
+<p>​	结果：盒子会慢慢变透明最终消失，有过渡效果，消失后继续占位置</p>
+</li>
+</ul>
+</li>
+<li>
+<p>过渡必须要有起始，如果除了起始，还有中间点，怎么办？</p>
+<p>两种办法</p>
+<ul>
+<li>
+<p>使用两次 transform</p>
+<p>.a === transform ===&gt; .b</p>
+<p>.b === transform ===&gt; .c</p>
+<p>如何知道到了中间点呢？</p>
+<p>用 setTimeout 或者监听 transitionend 事件</p>
+<p><a href="http://js.jirengu.com/buwah/1/edit?html,css,js,output">示例</a></p>
+</li>
+<li>
+<p>使用 animation</p>
+<p>声明关键帧</p>
+<p>添加动画</p>
+<p><a href="http://js.jirengu.com/peran/1/edit?html,css,output">示例</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-animation">5. animation</h2>
+<ul>
+<li>
+<p>@keyframes 完整语法</p>
+<ul>
+<li>
+<p>标准写法</p>
+<p>搜索 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">keyframes MDN</a> 讲的很清楚</p>
+<p>一种写法是 from to</p>
+<p>另一种写法是百分数</p>
+</li>
+</ul>
+</li>
+<li>
+<p>如何让动画停在最后一帧</p>
+<p>搜索 css animation stop at end</p>
+<p><a href="https://stackoverflow.com/questions/12991164/maintaining-the-final-state-at-end-of-a-css3-animation/12991203#12991203">网友给出的答案</a>是加个 forwards</p>
+<p><a href="http://js.jirengu.com/lodoy/1/edit?html,css,output">示例</a></p>
+</li>
+<li>
+<p>缩写语法</p>
+<p>animation: 时长 | 过渡方式 | 延迟 | 次数 | 方向 | 填充模式 | 是否暂停 | 动画名；</p>
+<p>时长：1s 或者 1000ms</p>
+<p>过渡方式：跟 transition 取值一样，如 linear</p>
+<p>次数：3 或者 2.4 或者 infinite</p>
+<p>方向：reverse | alternate | alternate-reverse</p>
+<p>填充模式：none | forwards | backwards | both</p>
+<p>是否暂停：paused | running</p>
+<p>以上所有属性都有对应的单独属性</p>
+</li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://dongshuaizhi.top/" >
+    &copy;  董帅志的博客 2020 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
