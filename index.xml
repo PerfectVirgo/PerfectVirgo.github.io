@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>董帅志的博客</title>
+    <title>董帅志的小窝</title>
     <link>http://dongshuaizhi.top/</link>
-    <description>Recent content on 董帅志的博客</description>
+    <description>Recent content on 董帅志的小窝</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hans</language>
     <lastBuildDate>Sun, 05 Apr 2020 20:57:30 +0800</lastBuildDate>
     
 	<atom:link href="http://dongshuaizhi.top/index.xml" rel="self" type="application/rss+xml" />
@@ -13,73 +12,73 @@
     
     <item>
       <title>CSS动画</title>
-      <link>http://dongshuaizhi.top/posts/css%E5%8A%A8%E7%94%BB/</link>
+      <link>http://dongshuaizhi.top/blog/css%E5%8A%A8%E7%94%BB/</link>
       <pubDate>Sun, 05 Apr 2020 20:57:30 +0800</pubDate>
       
-      <guid>http://dongshuaizhi.top/posts/css%E5%8A%A8%E7%94%BB/</guid>
+      <guid>http://dongshuaizhi.top/blog/css%E5%8A%A8%E7%94%BB/</guid>
       <description>1. 动画 定义 由许多静止的画面（帧） 以一定的速度（如每秒30张）连续播放时 肉眼因视觉残象产生错觉 而误以为是活动的画面 概念 帧：每个静止的画面都叫做</description>
     </item>
     
     <item>
       <title>CSS定位</title>
-      <link>http://dongshuaizhi.top/posts/css%E5%AE%9A%E4%BD%8D/</link>
+      <link>http://dongshuaizhi.top/blog/css%E5%AE%9A%E4%BD%8D/</link>
       <pubDate>Sun, 05 Apr 2020 20:56:45 +0800</pubDate>
       
-      <guid>http://dongshuaizhi.top/posts/css%E5%AE%9A%E4%BD%8D/</guid>
+      <guid>http://dongshuaizhi.top/blog/css%E5%AE%9A%E4%BD%8D/</guid>
       <description>1. 盒模型 Q：背景的范围是从哪到哪？（B） A. border 内边沿围成的区域 B. border 外边沿围成的区域 如何验证自己的猜想？border 半透明试试 Q：从左边看一个 d</description>
     </item>
     
     <item>
       <title>CSS布局</title>
-      <link>http://dongshuaizhi.top/posts/css%E5%B8%83%E5%B1%80/</link>
+      <link>http://dongshuaizhi.top/blog/css%E5%B8%83%E5%B1%80/</link>
       <pubDate>Sun, 05 Apr 2020 20:55:55 +0800</pubDate>
       
-      <guid>http://dongshuaizhi.top/posts/css%E5%B8%83%E5%B1%80/</guid>
+      <guid>http://dongshuaizhi.top/blog/css%E5%B8%83%E5%B1%80/</guid>
       <description>1. 布局分类 两种 固定宽度布局，一般宽度为 960 / 1000 / 1024 px 不固定宽度布局，主要靠文档流的原理来布局 还记得吗 文档流本来就是自适应的，不需要加额外的样式</description>
     </item>
     
     <item>
       <title>CSS概述</title>
-      <link>http://dongshuaizhi.top/posts/css%E6%A6%82%E8%BF%B0/</link>
+      <link>http://dongshuaizhi.top/blog/css%E6%A6%82%E8%BF%B0/</link>
       <pubDate>Sun, 05 Apr 2020 20:52:22 +0800</pubDate>
       
-      <guid>http://dongshuaizhi.top/posts/css%E6%A6%82%E8%BF%B0/</guid>
+      <guid>http://dongshuaizhi.top/blog/css%E6%A6%82%E8%BF%B0/</guid>
       <description>1. CSS层叠样式表，层叠指什么？ 样式层叠 可以多次对同一选择器进行样式声明 选择器层叠 可以用不同选择器对同一个元素进行样式声明 文件层叠 可以用多个</description>
     </item>
     
     <item>
       <title>HTML重点标签</title>
-      <link>http://dongshuaizhi.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
+      <link>http://dongshuaizhi.top/blog/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
       <pubDate>Thu, 02 Apr 2020 18:17:23 +0800</pubDate>
       
-      <guid>http://dongshuaizhi.top/posts/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
+      <guid>http://dongshuaizhi.top/blog/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
       <description>1. a 标签的用法 href 取值： 网址 https://google.com http://google.com //google.com 最高级，它会自动选择是用https还是http 路径 /a/b/c 以及 a/b/c 注意绝对路径开头的/是指http-server的根</description>
     </item>
     
     <item>
       <title>HTML概述</title>
-      <link>http://dongshuaizhi.top/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</link>
+      <link>http://dongshuaizhi.top/blog/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</link>
       <pubDate>Thu, 02 Apr 2020 02:09:12 +0800</pubDate>
       
-      <guid>http://dongshuaizhi.top/posts/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</guid>
+      <guid>http://dongshuaizhi.top/blog/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</guid>
       <description>1. HTML历史 HTML是在1990年左右诞生,由英国人Tim Berners-Lee发明，与此同时他还发明了HTTP和URL，与HTML共同组</description>
     </item>
     
     <item>
       <title>如何用hugo搭建个人博客</title>
-      <link>http://dongshuaizhi.top/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>http://dongshuaizhi.top/blog/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Wed, 01 Apr 2020 02:03:18 +0800</pubDate>
       
-      <guid>http://dongshuaizhi.top/posts/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>http://dongshuaizhi.top/blog/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>首先这是hugo官方教程，当然如果你不喜欢看英文的话，那就往下看我的教程吧 安装hugo 在https://github.com/gohugoi</description>
     </item>
     
     <item>
       <title>开博大吉</title>
-      <link>http://dongshuaizhi.top/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
+      <link>http://dongshuaizhi.top/blog/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
       <pubDate>Wed, 01 Apr 2020 00:03:54 +0800</pubDate>
       
-      <guid>http://dongshuaizhi.top/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
+      <guid>http://dongshuaizhi.top/blog/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
       <description>大家好，我的博客开通啦！</description>
     </item>
     

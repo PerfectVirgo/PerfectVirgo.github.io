@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>
+      
+          CSS概述 - 董帅志的小窝
+      
+  </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="董帅志" />
+  <link rel="shortcut icon" type="image/x-icon" href="http://dongshuaizhi.top/img/favicon.ico">
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="http://dongshuaizhi.top/style.min.6f642c5866835106e8a19b94463576436c99be9e41a8714ab3df3daa95f6bf90.css" integrity="sha256-b2QsWGaDUQbooZuURjV2Q2yZvp5BqHFKs989qpX2v5A=">
+  
+  
+  
+  <link rel="stylesheet" href="http://dongshuaizhi.top/style-dark.min.0a647fb6c07e04b77b54fa0515d0a683d39ecdb251dba960fe1f966f7ff36fc2.css" media="(prefers-color-scheme: dark)" integrity="sha256-CmR/tsB&#43;BLd7VPoFFdCmg9OezbJR26lg/h&#43;Wb3/zb8I=">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  
+  
+
+  <meta property="og:title" content="CSS概述" />
+<meta property="og:description" content="1. CSS层叠样式表，层叠指什么？ 样式层叠 可以多次对同一选择器进行样式声明 选择器层叠 可以用不同选择器对同一个元素进行样式声明 文件层叠 可以用多个" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dongshuaizhi.top/blog/css%E6%A6%82%E8%BF%B0/" />
+<meta property="article:published_time" content="2020-04-05T20:52:22+08:00" />
+<meta property="article:modified_time" content="2020-04-05T20:52:22+08:00" />
+<meta itemprop="name" content="CSS概述">
+<meta itemprop="description" content="1. CSS层叠样式表，层叠指什么？ 样式层叠 可以多次对同一选择器进行样式声明 选择器层叠 可以用不同选择器对同一个元素进行样式声明 文件层叠 可以用多个">
+<meta itemprop="datePublished" content="2020-04-05T20:52:22&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-05T20:52:22&#43;08:00" />
+<meta itemprop="wordCount" content="766">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:image" content="http://dongshuaizhi.top//img/avatar.jpg"/>
+<meta name="twitter:title" content="CSS概述"/>
+<meta name="twitter:description" content="1. CSS层叠样式表，层叠指什么？ 样式层叠 可以多次对同一选择器进行样式声明 选择器层叠 可以用不同选择器对同一个元素进行样式声明 文件层叠 可以用多个"/>
+
+  <!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <![endif]-->
+
+  </head>
+
+  <body>
+    
+  <h1>CSS概述</h1>
+  <header>
+  
+  <div class="avatar">
+    <img class="avatarMask" src="http://dongshuaizhi.top//img/avatar.jpg" alt="">
+    <a href="http://dongshuaizhi.top/"><img class="avatar-border" src="http://dongshuaizhi.top//img/avatar-border.svg" alt=""></a>
+  </div>
+  
+  <h2><a class="author" href="http://dongshuaizhi.top/">董帅志</a></h2>
+</header>
+
+  
+  
+  
+  <p class="date">April 5, 2020</p>
+  
+  
+  
+  
+  <div id="contentBody">
+    <h2 id="1-css层叠样式表层叠指什么">1. CSS层叠样式表，层叠指什么？</h2>
+<ul>
+<li>
+<p>样式层叠</p>
+<p>可以多次对同一选择器进行样式声明</p>
+</li>
+<li>
+<p>选择器层叠</p>
+<p>可以用不同选择器对同一个元素进行样式声明</p>
+</li>
+<li>
+<p>文件层叠</p>
+<p>可以用多个文件进行层叠</p>
+</li>
+<li>
+<p>这些特性使得CSS极度灵活</p>
+<p>这也为CSS后来被吐槽留下了隐患</p>
+</li>
+</ul>
+<h2 id="2-语法">2. 语法</h2>
+<ul>
+<li>
+<p>语法一：样式语法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">选择器</span> {
+  <span style="color:#960050;background-color:#1e0010">属性名:</span> <span style="color:#960050;background-color:#1e0010">属性值</span>;
+  <span style="color:#75715e">/*注释*/</span>
+}
+</code></pre></div></li>
+<li>
+<p>语法二：at语法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">charset</span> <span style="color:#e6db74">&#34;UTF-8&#34;</span>;     <span style="color:#75715e">/*声名字符编码*/</span>
+@<span style="color:#66d9ef">import</span> <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#f92672">2</span>.<span style="color:#a6e22e">css</span><span style="color:#f92672">)</span>;   <span style="color:#75715e">/*导入一个额外的CSS文件*/</span>
+@<span style="color:#66d9ef">media</span> <span style="color:#f92672">(</span><span style="color:#f92672">min-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">100px</span><span style="color:#f92672">)</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">max-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">200px</span><span style="color:#f92672">)</span> {      <span style="color:#75715e">/*媒体查询*/</span>
+    <span style="color:#f92672">语法一</span>
+}
+</code></pre></div><p>注意事项：</p>
+<ul>
+<li>@charset 必须放在第一行</li>
+<li>前两个 at 语法必须以分号 ; 结尾</li>
+<li>@media 语法后面填坑</li>
+<li>charset 是字符集的意思，但 UTF-8 是字符编码encoding，这是历史遗留问题</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-文档流-normal-flow">3. 文档流 Normal Flow</h2>
+<ul>
+<li>
+<p>文档流</p>
+<ul>
+<li>
+<p>流动方向</p>
+<p>inline 元素从左到右，到达最右边才会换行</p>
+<p>block 元素从上到下，每一个都另起一行</p>
+<p>inline-block 也是从左到右，但是到达最后的时候不会把自己分成两块，不会跨两行</p>
+<p><img src="https://i.loli.net/2020/04/03/Dw8tJMsx2mLBReu.png" alt="文档流.png"></p>
+</li>
+<li>
+<p>宽度</p>
+<p>inline 宽度为內部 inline 元素宽度的总和，不能用 width 指定</p>
+<p>block 默认自动计算宽度，宽度默认值为 <strong>auto</strong> 而不是 100%，可用 width 指定，<strong>永远不要写 width: 100%</strong></p>
+<p>inline-block 结合前两者特点，可用 width</p>
+</li>
+<li>
+<p>高度</p>
+<p>inline 高度由 inline-height 间接确定，跟 height 、padding 无关</p>
+<p>block 高度由内部文档流元素高度的总和决定，可以设 height</p>
+<p>inline-block 跟 block 类似，可以设置 height</p>
+<p><strong>tip：当 block 里没有内容时，高度为0，但 inline 里没有内容时，高度为行高</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p>overflow 溢出</p>
+<ul>
+<li>
+<p>当内容大于容器</p>
+<p>visible</p>
+<p>hidden</p>
+<p>scroll</p>
+<p>auto</p>
+<p><strong>tip：当容器有水平滚动条时，里面的 inline 元素（水平方向上）是默认只在第一屏里面显示，后面的留空，不会如上面所说到达最右边才会换行</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-盒模型">4. 盒模型</h2>
+<ul>
+<li>
+<p>请简述 CSS 盒模型是什么？</p>
+<p>CSS 盒模型分两种，一种是 content-box，一种是 border-box</p>
+<p>两者的区别是：content-box 的宽度只包含 content，border-box 的宽度包含了 border、paddding、content</p>
+</li>
+<li>
+<p>margin 合并</p>
+<ul>
+<li>
+<p>哪些情况会合并</p>
+<p>兄弟 margin 合并</p>
+<p>父子 margin 合并（塌陷）</p>
+</li>
+<li>
+<p>如何阻止合并</p>
+<p>兄弟合并是符合预期的</p>
+<p>兄弟合并可以用 inline-block 消除</p>
+<p>父子合并用 padding / border 挡住</p>
+<p>父子合并用 overflow: hidden 挡住</p>
+<p>父子合并用 display: flex</p>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <footer>
+  <p>
+  &copy; 2020 董帅志.
+  Powered by <a href="https://gohugo.io/">Hugo</a>
+  using the <a href="https://github.com/koirand/pulp/">pulp</a> theme.
+  </p>
+</footer>
+
+
+  </body>
+</html>
