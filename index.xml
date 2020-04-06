@@ -5,10 +5,19 @@
     <link>http://dongshuaizhi.top/</link>
     <description>Recent content on 董帅志的小窝</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 05 Apr 2020 20:57:30 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2020 17:13:57 +0800</lastBuildDate>
     
 	<atom:link href="http://dongshuaizhi.top/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>浅析URL</title>
+      <link>http://dongshuaizhi.top/blog/%E6%B5%85%E6%9E%90url/</link>
+      <pubDate>Mon, 06 Apr 2020 17:13:57 +0800</pubDate>
+      
+      <guid>http://dongshuaizhi.top/blog/%E6%B5%85%E6%9E%90url/</guid>
+      <description>1. IP Internet Protocal主要约定了两件事： 如何定位一台设备 如何封装数据报文，以跟其他设备交流 只要你在互联网中，你就有至少一个独特的 IP IP 分为内网</description>
+    </item>
     
     <item>
       <title>CSS动画</title>
@@ -57,10 +66,10 @@
     
     <item>
       <title>HTML概述</title>
-      <link>http://dongshuaizhi.top/blog/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</link>
+      <link>http://dongshuaizhi.top/blog/html%E6%A6%82%E8%BF%B0/</link>
       <pubDate>Thu, 02 Apr 2020 02:09:12 +0800</pubDate>
       
-      <guid>http://dongshuaizhi.top/blog/html%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B01/</guid>
+      <guid>http://dongshuaizhi.top/blog/html%E6%A6%82%E8%BF%B0/</guid>
       <description>1. HTML历史 HTML是在1990年左右诞生,由英国人Tim Berners-Lee发明，与此同时他还发明了HTTP和URL，与HTML共同组</description>
     </item>
     
