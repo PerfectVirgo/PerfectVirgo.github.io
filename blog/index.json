@@ -1,5 +1,14 @@
 [
     {
+        "ref": "http://dongshuaizhi.top/blog/js%E6%A6%82%E8%BF%B0/",
+        "title": "JS概述",
+        "section": "blog",
+        "tags": null,
+        "date" : "2020.04.07",
+        "body": "1. JavaScript 的诞生   布莱登临危受命\n公司要求给浏览器添加一个脚本功能\n公司要求这个脚本必须蹭 Java 的流量\n布莱登花十天设计了 JS 的最初版本（不是实现）\n  JS 的命名\nMocha 摩卡 =\u0026gt; LiveScript =\u0026gt; JavaScript\nJava 既是编程语言，也是一种咖啡\n浏览器一开始同时就支持 Java 和 JavaScript\n后来，JS 胜了（在浏览器上）\n  2. ECMAScript 标准的制定   时间\n1997 年 6 月，第一版 ECMAScript 发布\n1999 年 12 月，第三版发布，这个版本使用最广\n第四版，流产\n2009 年 12 月，第五版发布，增加了一些功能\n2015 年 6 月，第六版发布，新浏览器都支持这一版\n之后每年发布一版，版本号以年份命名\n  JS 与 ECMAScript 的关系\nECMAScript 是纸上的标准，JS 是浏览器的实现\n纸上标准往往落后于浏览器，先实现，再写进标准\n  3. JavaScript 的兴起   杀手级应用 Gmail\n2004 年愚人节，谷歌发布 Gmail 在线网页\n当时的人们认为网页只能用来看新闻和图片\nGmail 的发布让用户和开发者眼前一亮\n2005 年，Jesse 将谷歌用到的技术命名为 AJAX\n从此，前端技术正式出现\n在此之前的网页开发都是由后端和设计师完成\n2006 年，JQuery 发布，是目前最长寿的 JS 库\n后来的十年，JQuery 大放异彩，直到 IE 不行了，JQuery 才稍微没有那么火\n  4. JavaScript 的爆发   V8 快如闪电\nChrome 的 JS 引擎叫做 V8（V1 到 V7 是啥）\n2009 年，Ryan 基于 V8 创建了 Node.js\n2010 年，Isaac 基于 Node.js 写出了 npm\n前端工程师可以在浏览器之外执行 JS 了，Node.js 快速风靡\n同年，TJ 受 Sinatra 启发，发布了 Express.js\n从此，前端工程师可以愉快地写后端应用了\n  爆发\n这期间出来的技术太多，以后慢慢介绍：gulp、grunt、yeoman、requirejs、webpack、Angular、React、Vue 等\n这些技术很多也已经过时了\n  5. 总结   JS 是历史的选择\n一开始浏览器支持很多东西：Java、Flash、VBScript\n只有 JS 活到最后\n  JS 的低开高走\n一开始 JS 就是一个玩具语言\n但是 JS 每次都走对了风口\n  学习 JS 时需要注意\n旧的、过时的东西了解就好，考前记忆一些\n跟 IE 相关的知识一律忽略\n  "
+    }
+,
+    {
         "ref": "http://dongshuaizhi.top/blog/%E6%B5%85%E6%9E%90url/",
         "title": "浅析URL",
         "section": "blog",

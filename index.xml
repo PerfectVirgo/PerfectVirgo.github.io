@@ -5,10 +5,19 @@
     <link>http://dongshuaizhi.top/</link>
     <description>Recent content on 董帅志的小窝</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Apr 2020 17:13:57 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2020 01:37:57 +0800</lastBuildDate>
     
 	<atom:link href="http://dongshuaizhi.top/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JS概述</title>
+      <link>http://dongshuaizhi.top/blog/js%E6%A6%82%E8%BF%B0/</link>
+      <pubDate>Tue, 07 Apr 2020 01:37:57 +0800</pubDate>
+      
+      <guid>http://dongshuaizhi.top/blog/js%E6%A6%82%E8%BF%B0/</guid>
+      <description>1. JavaScript 的诞生 布莱登临危受命 公司要求给浏览器添加一个脚本功能 公司要求这个脚本必须蹭 Java 的流量 布莱登花十天设计了 JS 的最初版本（不是实现） JS 的命名 Mocha 摩</description>
+    </item>
     
     <item>
       <title>浅析URL</title>
