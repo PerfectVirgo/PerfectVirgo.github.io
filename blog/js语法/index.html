@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>
+      
+          JS语法 - 董帅志的小窝
+      
+  </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="董帅志" />
+  <link rel="shortcut icon" type="image/x-icon" href="http://dongshuaizhi.top/img/favicon.ico">
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="http://dongshuaizhi.top/style.min.6f642c5866835106e8a19b94463576436c99be9e41a8714ab3df3daa95f6bf90.css" integrity="sha256-b2QsWGaDUQbooZuURjV2Q2yZvp5BqHFKs989qpX2v5A=">
+  
+  
+  
+  <link rel="stylesheet" href="http://dongshuaizhi.top/style-dark.min.0a647fb6c07e04b77b54fa0515d0a683d39ecdb251dba960fe1f966f7ff36fc2.css" media="(prefers-color-scheme: dark)" integrity="sha256-CmR/tsB&#43;BLd7VPoFFdCmg9OezbJR26lg/h&#43;Wb3/zb8I=">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  
+  
+
+  <meta property="og:title" content="JS语法" />
+<meta property="og:description" content="1. JS 版本 ES 6 是最低要求 历史版本 ES 3，IE 6 支持，总体评价：垃圾 ES 5，总体评价：还是垃圾 ES 6，大部分浏览器支持，总体评价：一半垃圾一半好 ES 2019 与" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dongshuaizhi.top/blog/js%E8%AF%AD%E6%B3%95/" />
+<meta property="article:published_time" content="2020-04-09T01:37:57+08:00" />
+<meta property="article:modified_time" content="2020-04-09T01:37:57+08:00" />
+<meta itemprop="name" content="JS语法">
+<meta itemprop="description" content="1. JS 版本 ES 6 是最低要求 历史版本 ES 3，IE 6 支持，总体评价：垃圾 ES 5，总体评价：还是垃圾 ES 6，大部分浏览器支持，总体评价：一半垃圾一半好 ES 2019 与">
+<meta itemprop="datePublished" content="2020-04-09T01:37:57&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-09T01:37:57&#43;08:00" />
+<meta itemprop="wordCount" content="1788">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:image" content="http://dongshuaizhi.top//img/avatar.jpg"/>
+<meta name="twitter:title" content="JS语法"/>
+<meta name="twitter:description" content="1. JS 版本 ES 6 是最低要求 历史版本 ES 3，IE 6 支持，总体评价：垃圾 ES 5，总体评价：还是垃圾 ES 6，大部分浏览器支持，总体评价：一半垃圾一半好 ES 2019 与"/>
+
+  <!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <![endif]-->
+
+  </head>
+
+  <body>
+    
+  <h1>JS语法</h1>
+  <header>
+  
+  <div class="avatar">
+    <img class="avatarMask" src="http://dongshuaizhi.top//img/avatar.jpg" alt="">
+    <a href="http://dongshuaizhi.top/"><img class="avatar-border" src="http://dongshuaizhi.top//img/avatar-border.svg" alt=""></a>
+  </div>
+  
+  <h2><a class="author" href="http://dongshuaizhi.top/">董帅志</a></h2>
+</header>
+
+  
+  
+  
+  <p class="date">April 9, 2020</p>
+  
+  
+  
+  
+  <div id="contentBody">
+    <h2 id="1-js-版本">1. JS 版本</h2>
+<ul>
+<li>
+<p>ES 6 是最低要求</p>
+</li>
+<li>
+<p>历史版本</p>
+<p>ES 3，IE 6 支持，总体评价：垃圾</p>
+<p>ES 5，总体评价：还是垃圾</p>
+<p>ES 6，<a href="http://kangax.github.io/compat-table/es6/">大部分浏览器支持</a>，总体评价：一半垃圾一半好</p>
+<p>ES 2019 与 ES 6 差别不大</p>
+</li>
+<li>
+<p>为什么说 ES 6 一半垃圾</p>
+<p>因为 ES 不能删除以前的特性，要兼容旧网站</p>
+<p>也就是说以前能运行的网站，以后都要能运行</p>
+<p>对比 Python 3 你就能知道兼容的好处：稳定</p>
+</li>
+<li>
+<p>取其精华，去其糟粕</p>
+<p>对待 JS，这是我们的态度</p>
+</li>
+</ul>
+<h2 id="2-表达式与语句">2. 表达式与语句</h2>
+<ul>
+<li>
+<p>表达式</p>
+<p>1 + 2 表达式的<strong>值</strong>为 3</p>
+<p>add(1,2) 表达式的值为函数的<strong>返回值</strong> （只有函数才有返回值）</p>
+<p>console.log 表达式的值为函数本身</p>
+<p>console.log(3) 表达式的值为多少？答：undefined</p>
+</li>
+<li>
+<p>语句</p>
+<p>var a = 1 是一个语句</p>
+</li>
+<li>
+<p>二者的区别</p>
+<p>表达式一般都有值，语句可能有也可能没有</p>
+<p>语句一般会改变环境（声明、赋值）</p>
+<p>上面两句话并不是绝对的</p>
+</li>
+</ul>
+<h2 id="3-大小写敏感">3. 大小写敏感</h2>
+<ul>
+<li>
+<p>不要写错</p>
+<p><code>var a</code> 和 <code>var A</code> 是不同的</p>
+<p>object 和 Object 是不同的</p>
+<p>function 和 Function 是不同的</p>
+<p>具体含义后面说</p>
+</li>
+</ul>
+<h2 id="4-空格">4. 空格</h2>
+<ul>
+<li>
+<p>大部分空格没有实际意义</p>
+<p><code>var a = 1</code> 和 <code>var a=1</code>没有区别</p>
+<p>加回车大部分时候也不影响</p>
+<p><strong>只有一个地方不能加回车，那就是 return 后面</strong>（如果你在 return 后面不加任何东西/加了回车，它会自动帮你补充一个 undefined）</p>
+</li>
+</ul>
+<h2 id="5-标识符">5. 标识符</h2>
+<ul>
+<li>
+<p>规则</p>
+<p>第一个字符，可以是 Unicode 字母或 $ 或 _ 或中文</p>
+<p>后面的字符，除了上面所说，还可以有数字</p>
+<p>例如：<code>var 9$</code>，就会经典报错：<code>Uncaught SyntaxError: Invalid or unexpected token</code>，译为：<code>没有捕获的语法错误：不合法的或者是没有被期待的字符串</code></p>
+</li>
+<li>
+<p>变量名是标识符</p>
+<p><code>var _ = 1</code></p>
+<p><code>var $ = 2</code></p>
+<p><code>var ______ = 6</code></p>
+<p><code>var 你好 = 'hi'</code></p>
+</li>
+<li>
+<p>其他标识符用到再说</p>
+</li>
+</ul>
+<h2 id="6-注释">6. 注释</h2>
+<ul>
+<li>
+<p>规则</p>
+<p>//                只能注释一行代码</p>
+<p>/*      */      可以注释多行代码</p>
+</li>
+<li>
+<p>写代码要多写注释——放屁</p>
+</li>
+<li>
+<p>注释的分类</p>
+<ul>
+<li>
+<p>不好的注释</p>
+<p>把代码翻译成中文</p>
+<p>过时的注释</p>
+<p>发泄不满的注释</p>
+</li>
+<li>
+<p>好的注释</p>
+<p>踩坑注解</p>
+<p>为什么代码会写得这么奇怪，遇到什么 bug</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-区块-block">7. 区块 block</h2>
+<ul>
+<li>
+<p>把代码包在一起</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+}
+</code></pre></div></li>
+<li>
+<p>常常与 if / for / while 合用</p>
+</li>
+</ul>
+<h2 id="8-if-else-语句">8. if else 语句</h2>
+<ul>
+<li>
+<p>语法</p>
+<p>if (表达式) {语句1} else {语句2}</p>
+<p>{} 在语句只有一句的时候可以省略，不建议这样做</p>
+</li>
+<li>
+<p>变态情况</p>
+<ul>
+<li>
+<p>表达式里可以非常变态，如 <code>a = 1</code></p>
+</li>
+<li>
+<p>语句1里可以非常变态，如嵌套的 if else</p>
+</li>
+<li>
+<p>语句2里可以非常变态，如嵌套的 if else</p>
+</li>
+<li>
+<p>缩进也可以很变态，如面试题常常下套</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">2</span>)
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;a&#39;</span>)
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;a等于2&#39;</span>)
+</code></pre></div><p>结果是打印<code>a等于2</code>，因为如果你省略了{}，那么 if 只会管到第一个语句</p>
+</li>
+</ul>
+</li>
+<li>
+<p>最推荐使用的写法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">表达式</span>) {
+  <span style="color:#a6e22e">语句</span>
+} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">表达式</span>) {
+  <span style="color:#a6e22e">语句</span>
+} <span style="color:#66d9ef">else</span> {
+  <span style="color:#a6e22e">语句</span>
+}
+</code></pre></div></li>
+<li>
+<p>次推荐使用的写法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fn</span>(){
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">表达式</span>) {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">表达式</span>
+  }
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">表达式</span>) {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">表达式</span>
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">表达式</span>
+}
+</code></pre></div></li>
+</ul>
+<h2 id="9-switch-语句">9. switch 语句</h2>
+<ul>
+<li>
+<p>语法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">fruit</span>) {
+  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;banana&#34;</span><span style="color:#f92672">:</span>
+      <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">break</span>;
+  <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;apple&#34;</span><span style="color:#f92672">:</span>
+      <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">break</span>;
+  <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+      <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+</code></pre></div></li>
+<li>
+<p>break</p>
+<p>大部分时候，省略 break 你就完了</p>
+<p>少部分时候，可以利用 break</p>
+</li>
+<li>
+<p>示例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+<span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">a</span>) {
+  <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>
+  <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">:</span>
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;单数&#39;</span>);
+      <span style="color:#66d9ef">break</span>;
+  <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>
+  <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">:</span>
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;双数&#39;</span>);
+      <span style="color:#66d9ef">break</span>;
+}
+</code></pre></div><p>结果是打出<code>双数</code></p>
+</li>
+</ul>
+<h2 id="10-问号冒号表达式">10. 问号冒号表达式</h2>
+<ul>
+<li>
+<p>语法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">表达式1</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">表达式2</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">表达式3</span>
+</code></pre></div></li>
+<li>
+<p>示例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">max</span>(<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">b</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">b</span>;
+}
+</code></pre></div><p>等价于</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">max</span>(<span style="color:#a6e22e">a</span>,<span style="color:#a6e22e">b</span>) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">b</span>) {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>;
+  } <span style="color:#66d9ef">else</span> {
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">b</span>;
+  }
+}
+</code></pre></div></li>
+</ul>
+<h2 id="11--短路逻辑">11. &amp;&amp; 短路逻辑</h2>
+<ul>
+<li>
+<p>A &amp;&amp; B &amp;&amp; C &amp;&amp; D 取第一个假值或 D</p>
+<p>并不会取 true / false</p>
+</li>
+<li>
+<p>示例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">f1</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;f1存在&#39;</span>)
+</code></pre></div><p>等价于</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">if</span> (window.<span style="color:#a6e22e">f1</span>) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;f1存在&#39;</span>)
+}
+</code></pre></div></li>
+</ul>
+<h2 id="12--短路逻辑">12. || 短路逻辑</h2>
+<ul>
+<li>
+<p>A || B || C || D 取第一个真值或 D</p>
+<p>并不会取 true / false</p>
+</li>
+<li>
+<p>示例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">||</span> <span style="color:#ae81ff">100</span>
+</code></pre></div><p>等价于</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span>) {
+  <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span>;
+} <span style="color:#66d9ef">else</span> {
+  <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;	<span style="color:#75715e">//保底值
+</span><span style="color:#75715e"></span>}
+</code></pre></div></li>
+</ul>
+<h2 id="13-while-循环">13. while 循环</h2>
+<ul>
+<li>
+<p>语法</p>
+<p>while (表达式) {语句}</p>
+<p>判断表达式的真假</p>
+<p>当表达式为真，执行语句，执行完再判断表达式的真假</p>
+<p>当表达式为假，执行后面的语句</p>
+</li>
+<li>
+<p>其他</p>
+<p>do&hellip;while 用得不多，自行了解</p>
+</li>
+<li>
+<p>变态示例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.1</span>;
+<span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">a</span> <span style="color:#f92672">!==</span> <span style="color:#ae81ff">1</span>) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span>);
+  <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.1</span>;
+}
+</code></pre></div><p>会造成死循环，原因是浮点数不精确造成的</p>
+</li>
+</ul>
+<h2 id="14-for-循环">14. for 循环</h2>
+<ul>
+<li>
+<p>语法糖</p>
+<p>for 是 while 循环的方便写法</p>
+<p>方便在哪？答：while 循环的四条语句一条都不能省略，否则会陷入死循环</p>
+</li>
+<li>
+<p>语法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">语句1</span>;<span style="color:#a6e22e">表达式2</span>;<span style="color:#a6e22e">语句3</span>) {
+  <span style="color:#a6e22e">循环体</span>
+}
+</code></pre></div><p>先执行语句1</p>
+<p>然后判断表达式2</p>
+<p>如果为真，执行循环体，然后执行语句3</p>
+<p>如果为假，直接退出循环，执行后面的语句</p>
+</li>
+<li>
+<p>变态示例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+  <span style="color:#a6e22e">setTimeout</span>(()=&gt;{
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>)
+  },<span style="color:#ae81ff">0</span>)
+}
+</code></pre></div><p>结果是打印5次<code>5</code></p>
+<p>但如果把 var 改成 let ，居然会正常打印 0，1，2，3，4。原因是因为 for 循环在 let 的时候会有单独的逻辑，专门满足傻子的幻想</p>
+</li>
+</ul>
+<h2 id="15-break-和-continue">15. break 和 continue</h2>
+<ul>
+<li>退出当前所有循环 V.S. 退出当前一次循环</li>
+<li>如果存在多重循环，不带参数的 break 语句和 continue 语句都只针对最内层循环。</li>
+</ul>
+<h2 id="16-label-语句">16. label 语句</h2>
+<ul>
+<li>
+<p>语法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">foo</span><span style="color:#f92672">:</span> {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">1</span>);
+  <span style="color:#66d9ef">break</span> <span style="color:#a6e22e">foo</span>;
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;本行不会输出&#39;</span>);
+}
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">2</span>);
+</code></pre></div><p>foo 代表标识符</p>
+</li>
+<li>
+<p>面试示例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+  <span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>
+}
+</code></pre></div><p>Q：上面的东西是什么？</p>
+<p>A：首先这个东西不是一个对象，它是一个代码块，里面有个标签 a，a 的语句就只有一个 1</p>
+<p>Q：如何把它变成一个对象？</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>
+}
+</code></pre></div></li>
+</ul>
+
+  </div>
+  <footer>
+  <p>
+  &copy; 2020 董帅志.
+  Powered by <a href="https://gohugo.io/">Hugo</a>
+  using the <a href="https://github.com/koirand/pulp/">pulp</a> theme.
+  </p>
+</footer>
+
+
+  </body>
+</html>

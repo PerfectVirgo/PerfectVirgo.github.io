@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>
+      
+          数据类型和运算符 - 董帅志的小窝
+      
+  </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="董帅志" />
+  <link rel="shortcut icon" type="image/x-icon" href="http://dongshuaizhi.top/img/favicon.ico">
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="http://dongshuaizhi.top/style.min.6f642c5866835106e8a19b94463576436c99be9e41a8714ab3df3daa95f6bf90.css" integrity="sha256-b2QsWGaDUQbooZuURjV2Q2yZvp5BqHFKs989qpX2v5A=">
+  
+  
+  
+  <link rel="stylesheet" href="http://dongshuaizhi.top/style-dark.min.0a647fb6c07e04b77b54fa0515d0a683d39ecdb251dba960fe1f966f7ff36fc2.css" media="(prefers-color-scheme: dark)" integrity="sha256-CmR/tsB&#43;BLd7VPoFFdCmg9OezbJR26lg/h&#43;Wb3/zb8I=">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  
+  
+
+  <meta property="og:title" content="数据类型和运算符" />
+<meta property="og:description" content="1. 数字与字符串 都是一，为什么要分 1 和 &lsquo;1&rsquo; 功能不同 数字是数字，字符串是字符串，要严谨 数字能加减乘除，字符串不行 字符串能表示电话号码，数字不行 存储" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dongshuaizhi.top/blog/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6/" />
+<meta property="article:published_time" content="2020-04-10T01:37:57+08:00" />
+<meta property="article:modified_time" content="2020-04-10T01:37:57+08:00" />
+<meta itemprop="name" content="数据类型和运算符">
+<meta itemprop="description" content="1. 数字与字符串 都是一，为什么要分 1 和 &lsquo;1&rsquo; 功能不同 数字是数字，字符串是字符串，要严谨 数字能加减乘除，字符串不行 字符串能表示电话号码，数字不行 存储">
+<meta itemprop="datePublished" content="2020-04-10T01:37:57&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-10T01:37:57&#43;08:00" />
+<meta itemprop="wordCount" content="3552">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:image" content="http://dongshuaizhi.top//img/avatar.jpg"/>
+<meta name="twitter:title" content="数据类型和运算符"/>
+<meta name="twitter:description" content="1. 数字与字符串 都是一，为什么要分 1 和 &lsquo;1&rsquo; 功能不同 数字是数字，字符串是字符串，要严谨 数字能加减乘除，字符串不行 字符串能表示电话号码，数字不行 存储"/>
+
+  <!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <![endif]-->
+
+  </head>
+
+  <body>
+    
+  <h1>数据类型和运算符</h1>
+  <header>
+  
+  <div class="avatar">
+    <img class="avatarMask" src="http://dongshuaizhi.top//img/avatar.jpg" alt="">
+    <a href="http://dongshuaizhi.top/"><img class="avatar-border" src="http://dongshuaizhi.top//img/avatar-border.svg" alt=""></a>
+  </div>
+  
+  <h2><a class="author" href="http://dongshuaizhi.top/">董帅志</a></h2>
+</header>
+
+  
+  
+  
+  <p class="date">April 10, 2020</p>
+  
+  
+  
+  
+  <div id="contentBody">
+    <h2 id="1-数字与字符串">1. 数字与字符串</h2>
+<ul>
+<li>
+<p>都是一，为什么要分 1 和 &lsquo;1&rsquo;</p>
+</li>
+<li>
+<p>功能不同</p>
+<p>数字是数字，字符串是字符串，要严谨</p>
+<p>数字能加减乘除，字符串不行</p>
+<p>字符串能表示电话号码，数字不行</p>
+</li>
+<li>
+<p>存储形式不同</p>
+<p>JS 中，数字是用 64 位浮点数的形式存储的</p>
+<p>JS 中，字符串是用类似 UTF8 形式存储的（UCS-2）</p>
+</li>
+</ul>
+<h2 id="2-如何存数字">2. 如何存数字</h2>
+<ul>
+<li>
+<p>十进制转二进制即可</p>
+</li>
+<li>
+<p>二进制</p>
+<ul>
+<li>
+<p>10 转 2</p>
+<p>31 变成二进制	<img src="https://i.loli.net/2020/04/09/Irdnvbu2tPMpgQi.png" alt="31二进制1.png" width="500" /></p>
+<p>经过一番尝试	<img src="https://i.loli.net/2020/04/09/YvkQ4MRLBuy7CcI.png" alt="31二进制2.png" width="500" /></p>
+<p>所以 31（十进制) = 11111（二进制）</p>
+<p>不是套公式吗？程序员从来不套公式</p>
+</li>
+<li>
+<p>2 转 10</p>
+<p>100011 变成十进制</p>
+<p>每一位乘以 2 的 N 次方，然后加起来即可</p>
+<p>100011 = 2^5 + 2^1 + 2^0 = 35</p>
+</li>
+</ul>
+</li>
+<li>
+<p>用十六进制表示二进制</p>
+<ul>
+<li>
+<p>为什么用十六进制</p>
+<p>因为二进制写起来太慢了：011110001011010</p>
+<p>记住 8 4 2 1 对应 X X X X</p>
+<p>从右往左每四位改写成一位：<strong>011</strong>1100<strong>0101</strong>1010</p>
+<p>得到 3，12，5，10；把大于 9 的数字改为 ABCDEF</p>
+<p>于是得到 3C5A，你也可以用计算器的程序员模式</p>
+<p>HEX 表示 16 进制，BIN 表示 2 进制</p>
+<p>OCT 表示 8 进制，DEC 表示 10 进制</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-如何存字符">3. 如何存字符</h2>
+<ul>
+<li>
+<p>转成数字不就得了</p>
+<p>但是注意，&lsquo;1&rsquo; 不能用 1 来表示</p>
+</li>
+<li>
+<p>啥是 UTF8</p>
+<p>说来话长</p>
+</li>
+<li>
+<p>如何存储 a b c 1 2 3</p>
+<p>简单，编号表示</p>
+</li>
+<li>
+<p>用 0 ~ 127 表示所有符号</p>
+<img src="https://i.loli.net/2020/04/09/6cERWY1Bezvua7t.png" alt="0到127.png" width="700" align="left"/>
+<ul>
+<li>0 表示结束字符</li>
+<li>10 表示换行</li>
+<li>13 表示回车</li>
+<li>32 表示空格</li>
+<li>33 到 47 表示标点</li>
+<li>48 到 57 表示数字符号</li>
+<li>65 到 90 表示大写字母</li>
+<li>97 到 122 表示小写字母</li>
+<li>127 表示删除键</li>
+</ul>
+</li>
+<li>
+<p>中国人开始用电脑了</p>
+<p>怎么表示中文呢</p>
+</li>
+<li>
+<p>简单，还是编号</p>
+<p>中国国家标准局来编，名称为【国标2312】</p>
+</li>
+<li>
+<p>用 000 ~ FFFF 表示汉字</p>
+<img src="https://i.loli.net/2020/04/09/bBkfIKF7s2tmAlH.png" alt="GB2312.png" width="700" align="left"/>
+<ul>
+<li>一个 16 进制数是 4 个 0/1 位</li>
+<li>FFFF 就是 4x4=16 位，也就是两个字节</li>
+<li>最多收录 2^16 = 65536 个字符</li>
+<li>但只收录了 6000 多汉字、西文字母和日文假名</li>
+<li>【你】的 GB2312 编号为 C4E3</li>
+<li>【牛】的 GB2312 编号为 C5A3</li>
+</ul>
+</li>
+<li>
+<p>中国人的名字里有生僻字！</p>
+<p>eg：李讞 =&gt; 李*      陶喆 =&gt; 陶吉吉</p>
+<p>怎么表示生僻字、繁体字、韩文呢，之前的忘了编进去</p>
+</li>
+<li>
+<p>微软出手了</p>
+<p>微软推出了一个国标扩展，简称 GBK</p>
+</li>
+<li>
+<p>GBK <a href="https://zh.wikipedia.org/wiki/%E6%B1%89%E5%AD%97%E5%86%85%E7%A0%81%E6%89%A9%E5%B1%95%E8%A7%84%E8%8C%83">国标扩</a></p>
+<p><img src="https://i.loli.net/2020/04/09/SPAi68Fc7LahQzU.png" alt="GBK.png" width="500" align="left" /></p>
+<ul>
+<li>含 21886 个汉字和图形符号</li>
+<li>收录了中日韩使用的几乎所有汉字</li>
+<li>完全兼容 GB2312</li>
+<li>依然使用 16 位（两字节）</li>
+<li>后来国标局推出 GB18030 取代 GBK，但 GB18030 不兼容 GB2312</li>
+</ul>
+</li>
+<li>
+<p>网页里有藏文、泰文</p>
+<p>怎么办，显示不了</p>
+</li>
+<li>
+<p>简单，继续编号</p>
+<p>这回，一次解决全世界的需求</p>
+</li>
+<li>
+<p>万国码 Unicode</p>
+<ul>
+<li>
+<p>优点</p>
+<p>已收录 13 万字符（大于 16 位），全世界通用</p>
+<p>以后还会继续扩充，不会停止</p>
+<p>最新版只添加了一个字——令和的合体字</p>
+</li>
+<li>
+<p>缺点</p>
+<p>两个字节不够用，每个字符要用三个及以上字节</p>
+<p>这样所有文件都扩大 50%，不划算</p>
+<p>那怎么办？</p>
+</li>
+</ul>
+</li>
+<li>
+<p>虽然用 Unicode，但存的时候偷懒</p>
+<p>这样行不行</p>
+</li>
+<li>
+<p>UTF-8 就被发明出来了</p>
+<p>还真行</p>
+</li>
+<li>
+<p>鸡贼的存法</p>
+<ul>
+<li>
+<p>存储【a】</p>
+<p>a 对应的 Unicode 编号为 97，十六进制为 61</p>
+<p>Unicode 直接存：<strong>00000000</strong>00000000<strong>01100001</strong></p>
+<p>UTF-8 偷懒存法：01100001</p>
+<p>三字节变一字节，比 GBK 还省</p>
+</li>
+<li>
+<p>存储【你】</p>
+<p>你 对应的 Unicode 编号为 4F60</p>
+<p>Unicode 直接存：<strong>00000000</strong>01001111<strong>01100000</strong></p>
+<p>UTF-8 偷懒存法：<strong>11100100</strong>10111101<strong>10100000</strong></p>
+<p>还是三字节，没有省，但是字母都能省一点</p>
+</li>
+<li>
+<p>UTF-8 中的 8 的意思是</p>
+<p>最少可用 8 位存一个字符</p>
+</li>
+</ul>
+</li>
+<li>
+<p>UTF-8 的规则</p>
+<ul>
+<li>
+<p>以【你a】为例</p>
+<p><strong>11100100</strong>10111101<strong>10100000</strong>01100001</p>
+<p>如何知道上述内容表示什么字符？</p>
+<p>读 8 位信息 1110<strong>0100</strong></p>
+<p>发现开头有 3 个 1，说明这个字符有 3 个八位</p>
+<p>于是再读两个 8 位信息 10<strong>111101</strong> 10<strong>100000</strong></p>
+<p>前面的 10 不要，10 是表示我是跟着前面的，其他合起来，得 <strong>01001111</strong>01100000</p>
+<p>这就还原为 Unicode 的【你】了：<strong>00000000</strong>01001111<strong>01100000</strong></p>
+<p>再读 8 位信息 01100001</p>
+<p>发现开头是 0，说明这个字符只占 8 位</p>
+<p>这就还原为 Unicode 的【a】了：<strong>00000000</strong>00000000<strong>01100001</strong></p>
+</li>
+<li>
+<p>这一点看不懂就跳过，反正不考</p>
+<p>以去餐馆排队为比喻即可</p>
+</li>
+</ul>
+</li>
+<li>
+<p>到此为止，终于搞清楚如何存字符了</p>
+<p>那就是编号，然后存编号</p>
+</li>
+<li>
+<p>再问数字 1 和字符 1 的区别</p>
+<p>功能不同、存储形式不同</p>
+</li>
+</ul>
+<h2 id="4-js-中的数据类型">4. JS 中的数据类型</h2>
+<ul>
+<li>
+<p>7种（大小写无所谓）</p>
+<p>数字 number</p>
+<p>字符串 string</p>
+<p>布尔 bool</p>
+<p>符号 symbol</p>
+<p>空 underfined</p>
+<p>空 null</p>
+<p>对象 object</p>
+<p>总结：四基两空一对象</p>
+<p>前六种为简单类型，object 为复杂类型</p>
+</li>
+<li>
+<p>以下不是数据类型</p>
+<p>数组、函数、日期</p>
+<p>它们都属于 object</p>
+</li>
+</ul>
+<h2 id="5-数字-number">5. 数字 number</h2>
+<ul>
+<li>
+<p>64 位浮点数</p>
+</li>
+<li>
+<p>写法</p>
+<ul>
+<li>
+<p>整数写法</p>
+<p>1</p>
+</li>
+<li>
+<p>小数写法</p>
+<p>0.1</p>
+</li>
+<li>
+<p>科学计数法</p>
+<p>1.23e4</p>
+<p>bug：以下两种情况，JavaScript 会自动将数值转为科学计数法表示，其他情况都采用字面形式直接表示</p>
+<p>(1) 小数点前的数字多于21位。例如</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ae81ff">1234567890123456789012</span>
+<span style="color:#75715e">// 1.2345678901234568e+21
+</span><span style="color:#75715e"></span>    
+<span style="color:#ae81ff">123456789012345678901</span>
+<span style="color:#75715e">// 123456789012345680000
+</span></code></pre></div><p>(2) 小数点后的零多于5个。例如</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 小数点后紧跟5个以上的零，
+</span><span style="color:#75715e">// 就自动转为科学计数法
+</span><span style="color:#75715e"></span><span style="color:#ae81ff">0.0000003</span> <span style="color:#75715e">// 3e-7
+</span><span style="color:#75715e"></span>    
+<span style="color:#75715e">// 否则，就保持原来的字面形式
+</span><span style="color:#75715e"></span><span style="color:#ae81ff">0.000003</span> <span style="color:#75715e">// 0.000003
+</span></code></pre></div></li>
+<li>
+<p>八进制写法（用的少）</p>
+<p>0123 或 00123 或 0o123</p>
+</li>
+<li>
+<p>十六进制写法</p>
+<p>0x3F 或 0X3F</p>
+</li>
+<li>
+<p>二进制写法</p>
+<p>0b11 或 0B11</p>
+</li>
+</ul>
+</li>
+<li>
+<p>特殊值</p>
+<ul>
+<li>
+<p>正 0 和负 0</p>
+<p>都等于 0，要严谨</p>
+<p>eg：1/0 = Infinity、1/-0 = -Infinity</p>
+</li>
+<li>
+<p>无穷大</p>
+<p>Infinity、+Infinity、-Infinity</p>
+</li>
+<li>
+<p>无法表示的数字</p>
+<p>NaN（Not a Number）</p>
+<p>eg：0/0 = NaN</p>
+<p>但它是一个数字（不是它不是数字，而是在人类目前的认知里，你不知道它是什么数字）</p>
+<p>所以 NaN !== NaN</p>
+</li>
+</ul>
+</li>
+<li>
+<p>64 位浮点数</p>
+<ul>
+<li>
+<p>JS 数字的存储形式</p>
+<p>浮点就是浮动的点，意思就是小数点会乱动</p>
+<p>123.456 可以表示为 1.23456e10^2</p>
+<p>也可以表示为 12345.6e10^-2</p>
+<p><img src="https://i.loli.net/2020/04/10/8vPiCdDFyLGzMl2.png" alt="64位浮点数.png"></p>
+</li>
+<li>
+<p>64 位存储一个 number</p>
+<p>符号占 1 位</p>
+<p>指数占 11 位（-1023~1024）</p>
+<p>有效数字占 52 位（开头的 1 省略）</p>
+</li>
+</ul>
+</li>
+<li>
+<p>范围和精度</p>
+<p>范围（忽略符号位）</p>
+<p>指数拉满、有效数字拉满，得到最大二进制数字</p>
+<p>Number.MAX_VALUE: 1.7976931348623157e+308</p>
+<p>指数负方向拉满、有效数字最小 1，得到最小值</p>
+<p>Number.MIN_VALUE: 5e-324</p>
+</li>
+<li>
+<p>精度（有效数字）</p>
+<p>最多只能到 52+1 个二进制位表示有效数字</p>
+<p>2^53 对应的十进制是 9 后面 15 个零</p>
+<p>所以 15 位有效数字都能精确表示</p>
+<p>16 位有效数字如果小于 90 开头，也能精确表示</p>
+<p>9110 0000 0000 0001 就存不下来</p>
+</li>
+</ul>
+<h2 id="6-字符串-string">6. 字符串 string</h2>
+<ul>
+<li>
+<p>每个字符两个字节（阉割版 UTF8）</p>
+</li>
+<li>
+<p>写法</p>
+<ul>
+<li>
+<p>单引号</p>
+<p>&lsquo;你好&rsquo;</p>
+</li>
+<li>
+<p>双引号</p>
+<p>&ldquo;你好&rdquo;</p>
+</li>
+<li>
+<p>反引号</p>
+<p>`你好`</p>
+</li>
+<li>
+<p>注意</p>
+<p>引号不属于字符串的一部分，就像书名号不属于书名的一部分一样</p>
+<p>如果要在单引号里面包含单引号怎么办？</p>
+</li>
+</ul>
+</li>
+<li>
+<p>转义</p>
+<ul>
+<li>
+<p>错误写法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#39;it&#39;</span><span style="color:#a6e22e">s</span> <span style="color:#a6e22e">ok</span><span style="color:#960050;background-color:#1e0010">&#39;</span>
+</code></pre></div><p>JS 引擎会认为 &lsquo;it&rsquo; 就结束了，后面的看不懂</p>
+</li>
+<li>
+<p>正确写法</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#39;it\&#39;s ok&#39;</span>		<span style="color:#75715e">// 这就是转义
+</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;it&#39;s ok&#34;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">`it&#39;s ok`</span>
+</code></pre></div></li>
+<li>
+<p>用另一种写法表示你想要的东西</p>
+<p>\&rsquo; 表示 '</p>
+<p>\&rdquo; 表示 &quot;</p>
+<p>\n 表示换行</p>
+<p>\r 表示回车</p>
+<p>\t 表示 tab 制表符</p>
+<p>\\ 表示 \</p>
+<p>\uFFFF 表示对应的 Unicode 字符</p>
+<p>\xFF 表示前 256 个 Unicode 字符</p>
+</li>
+</ul>
+</li>
+<li>
+<p>多行字符串</p>
+<ul>
+<li>
+<p>如果你想要在字符串里回车</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`这样是
+</span><span style="color:#e6db74">可以的
+</span><span style="color:#e6db74">用反引号很容易做到`</span>
+</code></pre></div></li>
+<li>
+<p>以前没有反引号的时候</p>
+<p>写起来很麻烦，可以看<a href="https://wangdoc.com/javascript/types/string.html">网道教程</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>字符串的属性</p>
+<p>等等，对象才有属性，为什么字符串也有属性</p>
+</li>
+<li>
+<p>为什么字符串有属性</p>
+<p>等学完对象才能解答</p>
+</li>
+<li>
+<p>字符串的长度</p>
+<ul>
+<li>
+<p>string.length</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#39;123&#39;</span>.<span style="color:#a6e22e">length</span>	<span style="color:#75715e">// 3
+</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#39;\n\r\t&#39;</span>.<span style="color:#a6e22e">length</span>	<span style="color:#75715e">// 3
+</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#39;\\\\\\&#39;</span>.<span style="color:#a6e22e">length</span>	<span style="color:#75715e">// 3
+</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#39;&#39;</span>.<span style="color:#a6e22e">length</span>		<span style="color:#75715e">// 0
+</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#39; &#39;</span>.<span style="color:#a6e22e">length</span>		<span style="color:#75715e">// 1
+</span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>通过下标读取字符</p>
+<ul>
+<li>
+<p>string[index]</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;hello&#39;</span>;
+<span style="color:#a6e22e">s</span>[<span style="color:#ae81ff">0</span>]			<span style="color:#75715e">// &#34;h&#34;
+</span></code></pre></div></li>
+<li>
+<p>注意 index 从 0 开始</p>
+<p>s[0] 是第一个字符</p>
+</li>
+<li>
+<p>注意 index 到 length</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;hello&#39;</span>;
+<span style="color:#a6e22e">s</span>[<span style="color:#ae81ff">5</span>]			<span style="color:#75715e">// undefined,居然不报错
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">s</span>[<span style="color:#ae81ff">4</span>]			<span style="color:#75715e">// &#39;o&#39;
+</span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>base64 转码</p>
+<ul>
+<li>
+<p>window.btoa</p>
+<p>正常字符串转为 Base64 编码的字符串</p>
+</li>
+<li>
+<p>window.atob</p>
+<p>Base64 编码的字符串转为原来的字符串</p>
+</li>
+<li>
+<p>一般用来隐藏招聘启事里的简历</p>
+<p>邮箱：MTMyMDU0MzkyMUBxcS5jb20=</p>
+</li>
+<li>
+<p>有时候也用来自欺欺人</p>
+<p>所谓的【加密】，也就能骗过一部分外行</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-布尔-boolean">7. 布尔 boolean</h2>
+<ul>
+<li>
+<p>真或假</p>
+</li>
+<li>
+<p>只有两个值</p>
+<p>true 和 false，注意大小写</p>
+</li>
+<li>
+<p>下列运算符会得到 bool 值</p>
+<ul>
+<li>
+<p>否定运算</p>
+<p>!value</p>
+</li>
+<li>
+<p>相等运算</p>
+<p>1 == 2、1 != 2、3 === 4、3 !== 4</p>
+</li>
+<li>
+<p>比较运算</p>
+<p>1 &gt; 2、1 &gt;= 2、3 &lt; 4、3 &lt;= 4</p>
+</li>
+</ul>
+</li>
+<li>
+<p>if 配 bool</p>
+<ul>
+<li>
+<p>if 语句常常需要判断真假</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">value</span>) {
+    ...
+} <span style="color:#66d9ef">else</span> {
+    ...
+}
+</code></pre></div></li>
+<li>
+<p>问题来了</p>
+<p>如果 value 是 bool 值还好说</p>
+<p>如果 value 不是 bool 值咋办，谁真谁假</p>
+<p>1 是真还是假，0 是真还是假</p>
+<p>&lsquo;1&rsquo; 是真还是假，&lsquo;0&rsquo; 是真还是假</p>
+</li>
+<li>
+<p>五个 falsy 值</p>
+<p>falsy 就是相当于 false 但又不是 false 的值</p>
+<p>分别是 undefined	null	0	NaN	'&rsquo;</p>
+<p>所以 1 是真，0 是假，&lsquo;1&rsquo; 是真，&lsquo;0&rsquo; 是真</p>
+<p>再次声明，&rsquo;&rsquo; 和 ' ' 不是一个玩意，请保持严谨</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="8-符号-symbol">8. 符号 symbol</h2>
+<ul>
+<li>不怎么常用的数据类型</li>
+<li>直接参考<a href="https://zhuanlan.zhihu.com/p/22652486">文章</a></li>
+</ul>
+<h2 id="9-undefined-和-null-两种空类型">9. undefined 和 null 两种空类型</h2>
+<ul>
+<li>
+<p>空空如也</p>
+</li>
+<li>
+<p>为什么有两个空</p>
+<p>这是 JS 的原 (la) 创 (ji) 之处</p>
+</li>
+<li>
+<p>区别</p>
+<ul>
+<li>
+<p>没有本质区别</p>
+</li>
+<li>
+<p>细节一</p>
+<p>如果一个变量声明了，但没有赋值，那么默认值就是 undefined，而不是 null</p>
+</li>
+<li>
+<p>细节二</p>
+<p>如果一个函数，没有写 return，那么默认 return undefined，而不是 null</p>
+</li>
+<li>
+<p>细节三</p>
+<p>前端程序员习惯上，把非对象的空值写为 undefined，把对象的空值写为 null</p>
+<p>但仅仅是习惯上而已</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="10-变量声明">10. 变量声明</h2>
+<ul>
+<li>
+<p>三种声明方式</p>
+<p><code>var a = 1</code></p>
+<p><code>let a = 1</code></p>
+<p><code>const a = 1</code></p>
+<p><code>a = 1</code></p>
+</li>
+<li>
+<p>区别</p>
+<p>var 是过时的、不好用的方式</p>
+<p>let 是新的，更合理的方式</p>
+<p>const 是声明时必须赋值，且不能更改的方式</p>
+<p>最后这种方式是错误的，不准这样声明</p>
+</li>
+<li>
+<p>var 变量提升</p>
+<p>后面再说，可以提前看<a href="https://wangdoc.com/javascript/basic/grammar.html#%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87">网道教程</a></p>
+</li>
+<li>
+<p>var 声明</p>
+<ul>
+<li>
+<p>直接跳过</p>
+<p>写代码不用 var</p>
+<p>后面再单独说</p>
+</li>
+</ul>
+</li>
+<li>
+<p>let 声明</p>
+<ul>
+<li>
+<p>规则</p>
+<p>遵循块作用域，即使用范围不能超出 {}</p>
+<p>不能重复声明</p>
+<p>可以赋值，也可以不赋值</p>
+<p>必须先声明再使用，否则报错</p>
+<p>全局声明的 let 变量，不会变成 window 的属性</p>
+<p>for 循环配合 let 有奇效</p>
+</li>
+</ul>
+</li>
+<li>
+<p>const 声明</p>
+<ul>
+<li>
+<p>规则</p>
+<p>跟 let 几乎一样</p>
+<p>只有一条不一样：声明时就要赋值，赋值后不能改</p>
+<p>当然也不能配合 for 循环使用，因为这样会导致值被修改而报错</p>
+</li>
+</ul>
+</li>
+<li>
+<p>变量声明</p>
+<ul>
+<li>
+<p>指定值</p>
+<p>var a = 1</p>
+</li>
+<li>
+<p>同时也指定了类型</p>
+<p>var a = 1</p>
+</li>
+<li>
+<p>但是值和类型都可以随意变化</p>
+<p>a = 2</p>
+<p>a = &lsquo;字符串&rsquo;</p>
+</li>
+</ul>
+</li>
+<li>
+<p>name 和 &lsquo;name&rsquo; 的区别</p>
+<ul>
+<li>
+<p>name 是变量</p>
+<p>值可变，可能是 &lsquo;name&rsquo;，也可能是 &lsquo;hello&rsquo;</p>
+<p>类型也可变，可能是数字，也可能是字符串</p>
+</li>
+<li>
+<p>&lsquo;name&rsquo; 是字符串常量</p>
+<p>常量就是不变量</p>
+<p>&lsquo;name&rsquo; 只能是 &lsquo;name&rsquo;，不能是其他值</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="11-类型转换">11. 类型转换</h2>
+<ul>
+<li>
+<p>number =&gt; string</p>
+<p>String(n)</p>
+<p>n + '&rsquo;</p>
+</li>
+<li>
+<p>string =&gt; number</p>
+<p>Number(s)</p>
+<p>parseInt(s) / parseFloat(s)</p>
+<p>s - 0</p>
+<p>+s</p>
+</li>
+<li>
+<p>x =&gt; bool</p>
+<p>Boolean(x)</p>
+<p>!!x</p>
+</li>
+<li>
+<p>x =&gt; string</p>
+<p>String(x)</p>
+<p>x.toString()</p>
+<p>bug：<code>1.toString()</code> 会报错，因为 JS 认为 1. 是一个小数的开始，它认为 . 后面应该加数字，当它读到 t 时就错了，应改为 <code>(1).toString()</code> 或 <code>1..toString()</code> 或 <code>1 .toString()</code></p>
+</li>
+</ul>
+
+  </div>
+  <footer>
+  <p>
+  &copy; 2020 董帅志.
+  Powered by <a href="https://gohugo.io/">Hugo</a>
+  using the <a href="https://github.com/koirand/pulp/">pulp</a> theme.
+  </p>
+</footer>
+
+
+  </body>
+</html>

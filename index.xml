@@ -5,10 +5,37 @@
     <link>http://dongshuaizhi.top/</link>
     <description>Recent content on 董帅志的小窝</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 07 Apr 2020 01:37:57 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 01:37:57 +0800</lastBuildDate>
     
 	<atom:link href="http://dongshuaizhi.top/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>数据类型和运算符</title>
+      <link>http://dongshuaizhi.top/blog/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <pubDate>Fri, 10 Apr 2020 01:37:57 +0800</pubDate>
+      
+      <guid>http://dongshuaizhi.top/blog/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <description>1. 数字与字符串 都是一，为什么要分 1 和 &amp;lsquo;1&amp;rsquo; 功能不同 数字是数字，字符串是字符串，要严谨 数字能加减乘除，字符串不行 字符串能表示电话号码，数字不行 存储</description>
+    </item>
+    
+    <item>
+      <title>JS语法</title>
+      <link>http://dongshuaizhi.top/blog/js%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Thu, 09 Apr 2020 01:37:57 +0800</pubDate>
+      
+      <guid>http://dongshuaizhi.top/blog/js%E8%AF%AD%E6%B3%95/</guid>
+      <description>1. JS 版本 ES 6 是最低要求 历史版本 ES 3，IE 6 支持，总体评价：垃圾 ES 5，总体评价：还是垃圾 ES 6，大部分浏览器支持，总体评价：一半垃圾一半好 ES 2019 与</description>
+    </item>
+    
+    <item>
+      <title>内存图与JS世界</title>
+      <link>http://dongshuaizhi.top/blog/%E5%86%85%E5%AD%98%E5%9B%BE%E4%B8%8Ejs%E4%B8%96%E7%95%8C/</link>
+      <pubDate>Wed, 08 Apr 2020 01:37:57 +0800</pubDate>
+      
+      <guid>http://dongshuaizhi.top/blog/%E5%86%85%E5%AD%98%E5%9B%BE%E4%B8%8Ejs%E4%B8%96%E7%95%8C/</guid>
+      <description>1. 操作系统常识 一切都运行在内存里 开机 操作系统在 C 盘里（macOS 的在根目录下多个目录里） 当你按下开机键，主板通电，开始读取固件 固件就是固定在</description>
+    </item>
     
     <item>
       <title>JS概述</title>
