@@ -5,13 +5,22 @@
     <link>http://dongshuaizhi.top/</link>
     <description>Recent content on 董帅志的小窝</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 10 Apr 2020 01:37:57 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2020 01:37:57 +0800</lastBuildDate>
     
 	<atom:link href="http://dongshuaizhi.top/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>JS语法</title>
+      <title>JS对象基本用法</title>
+      <link>http://dongshuaizhi.top/blog/js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Sat, 11 Apr 2020 01:37:57 +0800</pubDate>
+      
+      <guid>http://dongshuaizhi.top/blog/js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
+      <description>1. 对象 定义 无序的数据集合 键值对的集合 写法 let obj = { &#39;name&#39;: &#39;frank&#39;, &#39;age&#39;: 18 } let obj = new Object({ &#39;name&#39;: &#39;frank&#39; }) console.log({ &#39;name&#39;: &#39;frank&#39;, &#39;age&#39;: 18 }) 细节 键名是字符串，不是标识符，可以包含任意字符 引号可省</description>
+    </item>
+    
+    <item>
+      <title>数据类型和运算符</title>
       <link>http://dongshuaizhi.top/blog/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
       <pubDate>Fri, 10 Apr 2020 01:37:57 +0800</pubDate>
       
