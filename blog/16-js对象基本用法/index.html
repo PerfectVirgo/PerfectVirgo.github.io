@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>
+      
+          JS对象基本用法 - 董帅志的小窝
+      
+  </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="董帅志" />
+  <link rel="shortcut icon" type="image/x-icon" href="http://dongshuaizhi.top/img/favicon.ico">
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="http://dongshuaizhi.top/style.min.6f642c5866835106e8a19b94463576436c99be9e41a8714ab3df3daa95f6bf90.css" integrity="sha256-b2QsWGaDUQbooZuURjV2Q2yZvp5BqHFKs989qpX2v5A=">
+  
+  
+  
+  <link rel="stylesheet" href="http://dongshuaizhi.top/style-dark.min.0a647fb6c07e04b77b54fa0515d0a683d39ecdb251dba960fe1f966f7ff36fc2.css" media="(prefers-color-scheme: dark)" integrity="sha256-CmR/tsB&#43;BLd7VPoFFdCmg9OezbJR26lg/h&#43;Wb3/zb8I=">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  
+  
+
+  <meta property="og:title" content="JS对象基本用法" />
+<meta property="og:description" content="1. 对象 定义 无序的数据集合 键值对的集合 写法 let obj = { &#39;name&#39;: &#39;frank&#39;, &#39;age&#39;: 18 } let obj = new Object({ &#39;name&#39;: &#39;frank&#39; }) console.log({ &#39;name&#39;: &#39;frank&#39;, &#39;age&#39;: 18 }) 细节 键名是字符串，不是标识符，可以包含任意字符 引号可省" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dongshuaizhi.top/blog/16-js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" />
+<meta property="article:published_time" content="2020-04-11T01:37:57+08:00" />
+<meta property="article:modified_time" content="2020-04-11T01:37:57+08:00" />
+<meta itemprop="name" content="JS对象基本用法">
+<meta itemprop="description" content="1. 对象 定义 无序的数据集合 键值对的集合 写法 let obj = { &#39;name&#39;: &#39;frank&#39;, &#39;age&#39;: 18 } let obj = new Object({ &#39;name&#39;: &#39;frank&#39; }) console.log({ &#39;name&#39;: &#39;frank&#39;, &#39;age&#39;: 18 }) 细节 键名是字符串，不是标识符，可以包含任意字符 引号可省">
+<meta itemprop="datePublished" content="2020-04-11T01:37:57&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-11T01:37:57&#43;08:00" />
+<meta itemprop="wordCount" content="1790">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:image" content="http://dongshuaizhi.top//img/avatar.jpg"/>
+<meta name="twitter:title" content="JS对象基本用法"/>
+<meta name="twitter:description" content="1. 对象 定义 无序的数据集合 键值对的集合 写法 let obj = { &#39;name&#39;: &#39;frank&#39;, &#39;age&#39;: 18 } let obj = new Object({ &#39;name&#39;: &#39;frank&#39; }) console.log({ &#39;name&#39;: &#39;frank&#39;, &#39;age&#39;: 18 }) 细节 键名是字符串，不是标识符，可以包含任意字符 引号可省"/>
+
+  <!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <![endif]-->
+
+  </head>
+
+  <body>
+    
+  <h1>JS对象基本用法</h1>
+  <header>
+  
+  <div class="avatar">
+    <img class="avatarMask" src="http://dongshuaizhi.top//img/avatar.jpg" alt="">
+    <a href="http://dongshuaizhi.top/"><img class="avatar-border" src="http://dongshuaizhi.top//img/avatar-border.svg" alt=""></a>
+  </div>
+  
+  <h2><a class="author" href="http://dongshuaizhi.top/">董帅志</a></h2>
+</header>
+
+  
+  
+  
+  <p class="date">April 11, 2020</p>
+  
+  
+  
+  
+  <div id="contentBody">
+    <h2 id="1-对象">1. 对象</h2>
+<ul>
+<li>
+<p>定义</p>
+<p>无序的数据集合</p>
+<p>键值对的集合</p>
+</li>
+<li>
+<p>写法</p>
+<p><code>let obj = { 'name': 'frank', 'age': 18 }</code></p>
+<p><code>let obj = new Object({ 'name': 'frank' })</code></p>
+<p><code>console.log({ 'name': 'frank', 'age': 18 })</code></p>
+</li>
+<li>
+<p>细节</p>
+<p>键名是字符串，不是标识符，可以包含任意字符</p>
+<p>引号可省略，省略之后就只能写标识符</p>
+<p><strong>就算引号省略了，键名也还是字符串（重要）</strong></p>
+</li>
+<li>
+<p>属性名</p>
+<p>每个 key 都是对象的属性名（property）</p>
+</li>
+<li>
+<p>属性值</p>
+<p>每个 value 都是对象的属性值</p>
+</li>
+<li>
+<p>奇怪的属性名</p>
+<ul>
+<li>
+<p>所有属性名会自动变成字符串</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+    <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;a&#39;</span>,
+    <span style="color:#ae81ff">3.2</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;b&#39;</span>,
+    <span style="color:#ae81ff">1</span><span style="color:#a6e22e">e2</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#ae81ff">1</span><span style="color:#a6e22e">e</span><span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#ae81ff">.234</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#ae81ff">0xFF</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+};
+Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">obj</span>)
+=&gt;[<span style="color:#e6db74">&#34;1&#34;</span>,<span style="color:#e6db74">&#34;100&#34;</span>,<span style="color:#e6db74">&#34;255&#34;</span>,<span style="color:#e6db74">&#34;3.2&#34;</span>,<span style="color:#e6db74">&#34;0.01&#34;</span>,<span style="color:#e6db74">&#34;0.234&#34;</span>]
+</code></pre></div></li>
+<li>
+<p>细节</p>
+<p>Object.keys(obj) 可以得到 obj 的所有 key</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>变量</strong>做属性名</p>
+<ul>
+<li>
+<p>如何用变量做属性名</p>
+<p>之前都是用<strong>常量</strong>做属性名</p>
+<p><code>let p1 = 'name'</code></p>
+<p><code>let obj = { p1: 'frank' }</code> 这样写，属性名为 &lsquo;p1&rsquo;</p>
+<p><code>let obj = { [p1]: 'frank' }</code> 这样写，属性名为 &lsquo;name&rsquo;</p>
+</li>
+<li>
+<p>对比</p>
+<p>不加 [] 的属性名会自动变成字符串</p>
+<p>加了 [] 则会当做变量求值</p>
+<p>值如果不是字符串，则会自动变成字符串</p>
+</li>
+</ul>
+</li>
+<li>
+<p>对象的<strong>隐藏</strong>属性</p>
+<ul>
+<li>
+<p>隐藏属性</p>
+<p>JS 中每一个对象都有一个隐藏属性</p>
+<p>这个隐藏属性储存着其<strong>共有属性组成的对象</strong>的地址</p>
+<p>这个<strong>共有属性组成的对象</strong>叫做原型</p>
+<p>也就是说，隐藏属性储存着原型的地址</p>
+</li>
+<li>
+<p>代码示例</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {}
+<span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">toString</span>()	<span style="color:#75715e">// 居然不报错
+</span></code></pre></div><p>因为 obj 的隐藏属性<strong>对应的对象</strong>上有 toString()</p>
+</li>
+</ul>
+</li>
+<li>
+<p>超纲知识</p>
+<ul>
+<li>
+<p>除了字符串，symbol 也能做属性名</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Symbol</span>()
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> { [<span style="color:#a6e22e">a</span>]<span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hello&#39;</span> }
+</code></pre></div></li>
+<li>
+<p>这有什么用呢？</p>
+<p>目前，屁用都没有，很久很久以后会有用</p>
+<p>在学习【迭代】时会用到</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-对象属性的增删改查">2. 对象属性的增删改查</h2>
+<ul>
+<li>
+<p>删除属性</p>
+<ul>
+<li>
+<p><code>delete obj.xxx</code> 或 <code>delete obj['xxx']</code></p>
+<p>即可删除 obj 的 xxx 属性</p>
+<p>请区分【属性值为 undefined】和 【不含属性名】</p>
+</li>
+<li>
+<p>不含属性名</p>
+<p><code>'xxx' in obj === false</code></p>
+</li>
+<li>
+<p>含有属性名，但是值为 undefined</p>
+<p><code>'xxx' in obj === true &amp;&amp; obj.xxx === undefined</code></p>
+</li>
+<li>
+<p>注意 <code>obj.xxx === undefined</code></p>
+<p>不能断定 &lsquo;xxx&rsquo; 是否为 obj 的属性</p>
+</li>
+<li>
+<p>类比</p>
+<p>你有没有卫生纸？</p>
+<p>A：没有					// 不含属性名</p>
+<p>B：有，但是没带	// 含有属性名，但是值为 undefined</p>
+</li>
+<li>
+<p>程序员就是这么严谨</p>
+<p>没有就是没有，undefined 就是 undefined，绝不含糊</p>
+</li>
+</ul>
+</li>
+<li>
+<p>查看所有属性（读属性）</p>
+<ul>
+<li>
+<p>查看自身所有属性</p>
+<p><code>Object.keys(obj)</code>：可以查所有的 key</p>
+<p><code>Object.values(obj)</code>：可以查所有的 value</p>
+<p><code>Object.entries(obj)</code>：可以查所有的 key 和 value</p>
+</li>
+<li>
+<p>查看自身 + 共有属性</p>
+<p><code>console.dir(obj)</code></p>
+</li>
+<li>
+<p>判断一个属性是自身的还是共有的</p>
+<p><code>obj.hasOwnProperty('toString')</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>原型</p>
+<ul>
+<li>
+<p>每个对象都有原型</p>
+<p>原型里存着对象的共有属性</p>
+<p>比如 obj 的原型就是一个对象</p>
+<p>obj.__proto__ 存着这个对象的地址</p>
+<p>这个对象里有 toString / constructor / valueOf 等属性</p>
+</li>
+<li>
+<p>对象的原型也是对象</p>
+<p>所以对象的原型也有原型</p>
+<p><code>obj = {}</code> 的原型即为所有对象的原型</p>
+<p>这个原型包含所有对象的共有属性，是<strong>对象的根</strong></p>
+<p>这个原型也有原型，是 null</p>
+</li>
+</ul>
+</li>
+<li>
+<p>查看属性</p>
+<ul>
+<li>
+<p>两种方法查看属性</p>
+<p>中括号语法：<code>obj['key']</code></p>
+<p>点语法：<code>obj.key</code></p>
+<p>坑新人语法：<code>obj[key]		//变量 key 值一般不为 'key'</code></p>
+<p>示例：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;frank&#39;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">18</span> }
+<span style="color:#a6e22e">obj</span>[<span style="color:#e6db74">&#39;name&#39;</span>]		<span style="color:#75715e">// &#34;frank&#34;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">name</span>		<span style="color:#75715e">// &#34;frank&#34;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">name</span>]		<span style="color:#75715e">// undefined，默认每一个 window 的 name 都是空字符串
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">name</span>			<span style="color:#75715e">// &#34;&#34;
+</span><span style="color:#75715e"></span>    
+window.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;age&#39;</span>
+<span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">name</span>]
+<span style="color:#75715e">// 18，因为 name 是全局变量，全局变量也是 window 的属性，这是 JS 的奇葩设定，所以如果中括号里是变量，必须先求变量的值
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">name</span>			<span style="color:#75715e">// &#34;age&#34;
+</span><span style="color:#75715e"></span>    
+<span style="color:#a6e22e">obj</span>[<span style="color:#e6db74">&#39;na&#39;</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#39;me&#39;</span>]	<span style="color:#75715e">// &#34;frank&#34;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;name&#39;</span>)]
+<span style="color:#75715e">// undefined，因为 log 返回的值永远是 undefined，所以相当于obj[&#39;undefined&#39;]，而 obj 是没有这个 key 的，所以最后得到 undefined
+</span></code></pre></div><p>总结：读对象的属性时，
+如果使用 [ ] 语法，那么 JS 会先求 [ ] 中表达式的值，注意区分表达式是变量还是常量。
+如果使用点语法，那么点后面一定是 string 常量。</p>
+</li>
+<li>
+<p>请优先使用中括号语法</p>
+<p>点语法会误导你，让你以为 key 不是字符串</p>
+<p>等你确定不会弄混两种语法，再改用点语法</p>
+</li>
+<li>
+<p><code>obj.name</code> 等价于 <code>obj['name']</code></p>
+<p><code>obj.name</code> 不等价于 <code>obj[name]</code></p>
+<p>简单来说，. 后面的 name 是字符串，而不是变量</p>
+</li>
+<li>
+<p><code>let name = 'frank'</code></p>
+<p><code>obj[name]</code> 等价于 <code>obj['frank']</code> 而不是 <code>obj['name']</code> 和 <code>obj.name</code></p>
+</li>
+<li>
+<p>考题</p>
+<p>代码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">list</span> <span style="color:#f92672">=</span> [ <span style="color:#e6db74">&#39;name&#39;</span>, <span style="color:#e6db74">&#39;age&#39;</span>, <span style="color:#e6db74">&#39;gender&#39;</span> ]
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;frank&#39;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">18</span>, <span style="color:#a6e22e">gender</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;man&#39;</span> }
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">list</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">list</span>[<span style="color:#a6e22e">i</span>];
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">person__</span><span style="color:#f92672">???</span><span style="color:#a6e22e">__</span>)
+}
+<span style="color:#75715e">// 使得 person 的所有属性被打印出来
+</span></code></pre></div><p>选项：（B）</p>
+<p>A. <code>console.log(person.name)</code></p>
+<p>B. <code>console.log(person[name])</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>修改或增加属性（写属性）</p>
+<ul>
+<li>
+<p>直接赋值</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;frank&#39;</span> }	<span style="color:#75715e">// name 是字符串
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;frank&#39;</span>			<span style="color:#75715e">// name 是字符串
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">obj</span>[<span style="color:#e6db74">&#39;name&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;frank&#39;</span>
+<span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">name</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;frank&#39;</span>			<span style="color:#75715e">// 错，因 name 值不确定
+</span><span style="color:#75715e"></span>    
+<span style="color:#a6e22e">obj</span>[<span style="color:#e6db74">&#39;na&#39;</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#39;me&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;frank&#39;</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;name&#39;</span>;
+<span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">key</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;frank&#39;</span>
+    
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;name&#39;</span>;
+<span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;frank&#39;</span>			<span style="color:#75715e">// 错，因为 obj.key 等价于 obj[&#39;key&#39;]
+</span></code></pre></div></li>
+<li>
+<p>批量赋值</p>
+<p><code>Object.assign(obj, { age: 18, gender: 'man' })</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>修改或增加共有属性</p>
+<ul>
+<li>
+<p>无法通过自身修改或增加共有属性</p>
+<p><code>let obj = {}, obj2 = {}		// 共有 toString</code></p>
+<p><code>obj.tostring = 'xxx'</code> 只会在改 obj 自身属性</p>
+<p><code>obj2.toString</code> 还是在原型上</p>
+<p>在读的时候会去看你的隐藏属性对应的原型，写的时候不走原型，写的时候只能写到自己身上</p>
+</li>
+<li>
+<p>我偏要修改或增加原型上的属性</p>
+<p><code>obj.__proto__.toString = 'xxx'	// 不推荐用__proto__ ,所有__proto__代码都是强烈不推荐写的</code></p>
+<p><code>Object.prototype.toString = 'xxx'</code></p>
+<p>一般来说，不要修改原型，会引起很多问题</p>
+</li>
+</ul>
+</li>
+<li>
+<p>修改隐藏属性</p>
+<ul>
+<li>
+<p>不推荐使用 __proto__</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;frank&#39;</span> }
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj2</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;jack&#39;</span> }
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">common</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">kind</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;human&#39;</span> }
+<span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">__proto__</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">common</span>
+<span style="color:#a6e22e">obj2</span>.<span style="color:#a6e22e">__proto__</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">common</span>
+</code></pre></div></li>
+<li>
+<p>推荐使用 Object.create</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">common</span>)
+<span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;frank&#39;</span>
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj2</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">common</span>)
+<span style="color:#a6e22e">obj2</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;jack&#39;</span>
+</code></pre></div><p>规范大概的意思是，要改就一开始就改，别后来再改</p>
+</li>
+<li>
+<p>用内存图理解</p>
+<p><img src="https://i.loli.net/2020/04/12/tWzkTeIM6CP3JK5.png" alt="原型链.PNG"></p>
+</li>
+<li>
+<p><code>var obj = Object.create({ name: 'frank' })</code></p>
+<p>与 <code>var obj2 = new Object({ name: 'frank' })</code> 的区别</p>
+<p>答：前者的属性是写在原型上的，后者的属性是写在自身上的，具体如图</p>
+<p><img src="https://i.loli.net/2020/04/12/4oBPSneJyxAsgLk.png" alt="JS对象.png"></p>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <footer>
+  <p>
+  &copy; 2020 董帅志.
+  Powered by <a href="https://gohugo.io/">Hugo</a>
+  using the <a href="https://github.com/koirand/pulp/">pulp</a> theme.
+  </p>
+</footer>
+
+
+  </body>
+</html>

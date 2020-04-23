@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>
+      
+          如何用hugo搭建个人博客 - 董帅志的小窝
+      
+  </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="董帅志" />
+  <link rel="shortcut icon" type="image/x-icon" href="http://dongshuaizhi.top/img/favicon.ico">
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="http://dongshuaizhi.top/style.min.6f642c5866835106e8a19b94463576436c99be9e41a8714ab3df3daa95f6bf90.css" integrity="sha256-b2QsWGaDUQbooZuURjV2Q2yZvp5BqHFKs989qpX2v5A=">
+  
+  
+  
+  <link rel="stylesheet" href="http://dongshuaizhi.top/style-dark.min.0a647fb6c07e04b77b54fa0515d0a683d39ecdb251dba960fe1f966f7ff36fc2.css" media="(prefers-color-scheme: dark)" integrity="sha256-CmR/tsB&#43;BLd7VPoFFdCmg9OezbJR26lg/h&#43;Wb3/zb8I=">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  
+  
+
+  <meta property="og:title" content="如何用hugo搭建个人博客" />
+<meta property="og:description" content="首先这是hugo官方教程，当然如果你不喜欢看英文的话，那就往下看我的教程吧 安装hugo 在https://github.com/gohugoi" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dongshuaizhi.top/blog/03-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" />
+<meta property="article:published_time" content="2020-04-01T02:03:18+08:00" />
+<meta property="article:modified_time" content="2020-04-01T02:03:18+08:00" />
+<meta itemprop="name" content="如何用hugo搭建个人博客">
+<meta itemprop="description" content="首先这是hugo官方教程，当然如果你不喜欢看英文的话，那就往下看我的教程吧 安装hugo 在https://github.com/gohugoi">
+<meta itemprop="datePublished" content="2020-04-01T02:03:18&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-01T02:03:18&#43;08:00" />
+<meta itemprop="wordCount" content="685">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:image" content="http://dongshuaizhi.top//img/avatar.jpg"/>
+<meta name="twitter:title" content="如何用hugo搭建个人博客"/>
+<meta name="twitter:description" content="首先这是hugo官方教程，当然如果你不喜欢看英文的话，那就往下看我的教程吧 安装hugo 在https://github.com/gohugoi"/>
+
+  <!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <![endif]-->
+
+  </head>
+
+  <body>
+    
+  <h1>如何用hugo搭建个人博客</h1>
+  <header>
+  
+  <div class="avatar">
+    <img class="avatarMask" src="http://dongshuaizhi.top//img/avatar.jpg" alt="">
+    <a href="http://dongshuaizhi.top/"><img class="avatar-border" src="http://dongshuaizhi.top//img/avatar-border.svg" alt=""></a>
+  </div>
+  
+  <h2><a class="author" href="http://dongshuaizhi.top/">董帅志</a></h2>
+</header>
+
+  
+  
+  
+  <p class="date">April 1, 2020</p>
+  
+  
+  
+  
+  <div id="contentBody">
+    <p>首先这是<a href="https://gohugo.io/getting-started/quick-start/">hugo官方教程</a>，当然如果你不喜欢看英文的话，那就往下看我的教程吧</p>
+<ol>
+<li>
+<h3 id="安装hugo-br">安装hugo <br></h3>
+<p>在<a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a>里下载安装包并解压<br>
+验证安装，显示版本号即安装成功</p>
+<pre><code>$ hugo version
+</code></pre></li>
+<li>
+<h3 id="建立新网站br">建立新网站　<br></h3>
+<p>将<code>quickstar</code>替换为你用于存放和上传博客的本地仓库的文件夹名称</p>
+<pre><code>$ hugo new site quickstart
+</code></pre></li>
+<li>
+<h3 id="添加主题br">添加主题　<br></h3>
+<p>首先，从Github下载默认主题并将其添加到您网站的theme目录中</p>
+<pre><code>$ cd quickstart
+$ git init
+$ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+</code></pre><p>然后，将主题添加到站点配置中</p>
+<pre><code>$ echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml
+</code></pre></li>
+<li>
+<h3 id="开始写博客">开始写博客</h3>
+<p>首先创建一个新.md文件</p>
+<pre><code>$ hugo new posts/my-first-post.md
+</code></pre><p>新创建的文件会从以下内容开始</p>
+<pre><code>---
+$ title: &quot;My First Post&quot;
+$ date: 2019-03-26T08:47:11+01:00
+$ draft: true
+---
+</code></pre><p>这里要注意写完博客后要把<code>draft: true</code>修改为<code>draft: false</code>，因为draft是草稿的意思</p>
+</li>
+<li>
+<h3 id="启动hugo服务器">启动Hugo服务器</h3>
+<pre><code>$ hugo server -D
+                   | EN
+  +------------------+----+
+    Pages            | 10
+    Paginator pages  |  0
+    Non-page files   |  0
+    Static files     |  3
+    Processed images |  0
+    Aliases          |  1
+    Sitemaps         |  1
+    Cleaned          |  0
+
+  Total in 11 ms
+  Watching for changes in /Users/bep/quickstart/{content,data,layouts,static,themes}
+  Watching for config changes in /Users/bep/quickstart/config.toml
+  Environment: &quot;development&quot;
+  Serving pages from memory
+  Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+  Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+  Press Ctrl+C to stop
+</code></pre><p>Ctrl+C即可进入预览页面<a href="http://localhost:1313/">http://localhost:1313/</a>，在本地的md文档中随意编辑或添加新内容，只需在浏览器中刷新即可快速查看更改</p>
+</li>
+<li>
+<h3 id="自定义主题">自定义主题</h3>
+<p>对网站进行一些配置,在文本编辑器中打开<code>config.toml</code></p>
+<pre><code>baseURL = &quot;https://example.org/&quot;
+languageCode = &quot;en-us&quot;
+title = &quot;My New Hugo Site&quot;
+theme = &quot;ananke&quot;
+</code></pre><p>其中:<br>
+<code>languageCode = &quot;zh-Hans&quot;</code> 网站语言设置为中文<br>
+<code>title</code>和<code>theme</code>可以自行更改,更多主题请访问<a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></p>
+</li>
+<li>
+<h3 id="建立静态页面">建立静态页面</h3>
+<pre><code>$ hugo -D
+</code></pre><p>此时在<code>quickstart</code>下面会生成一个<code>public</code>文件夹,表示搭建成功</p>
+</li>
+<li>
+<h3 id="完结撒花">完结撒花</h3>
+<p>之后你就能通过git和Github完成个人博客的修改以及上传啦</p>
+</li>
+</ol>
+
+  </div>
+  <footer>
+  <p>
+  &copy; 2020 董帅志.
+  Powered by <a href="https://gohugo.io/">Hugo</a>
+  using the <a href="https://github.com/koirand/pulp/">pulp</a> theme.
+  </p>
+</footer>
+
+
+  </body>
+</html>
