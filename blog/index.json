@@ -117,15 +117,6 @@
     }
 ,
     {
-        "ref": "http://dongshuaizhi.top/blog/03-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/",
-        "title": "如何用hugo搭建个人博客",
-        "section": "blog",
-        "tags": null,
-        "date" : "2020.04.01",
-        "body": "首先这是hugo官方教程，当然如果你不喜欢看英文的话，那就往下看我的教程吧\n  安装hugo  在https://github.com/gohugoio/hugo/releases里下载安装包并解压\n验证安装，显示版本号即安装成功\n$ hugo version   建立新网站　 将quickstar替换为你用于存放和上传博客的本地仓库的文件夹名称\n$ hugo new site quickstart   添加主题　 首先，从Github下载默认主题并将其添加到您网站的theme目录中\n$ cd quickstart $ git init $ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 然后，将主题添加到站点配置中\n$ echo 'theme = \u0026quot;ananke\u0026quot;' \u0026gt;\u0026gt; config.toml   开始写博客 首先创建一个新.md文件\n$ hugo new posts/my-first-post.md 新创建的文件会从以下内容开始\n--- $ title: \u0026quot;My First Post\u0026quot; $ date: 2019-03-26T08:47:11+01:00 $ draft: true --- 这里要注意写完博客后要把draft: true修改为draft: false，因为draft是草稿的意思\n  启动Hugo服务器 $ hugo server -D | EN +------------------+----+ Pages | 10 Paginator pages | 0 Non-page files | 0 Static files | 3 Processed images | 0 Aliases | 1 Sitemaps | 1 Cleaned | 0 Total in 11 ms Watching for changes in /Users/bep/quickstart/{content,data,layouts,static,themes} Watching for config changes in /Users/bep/quickstart/config.toml Environment: \u0026quot;development\u0026quot; Serving pages from memory Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender Web Server is available at http://localhost:1313/ (bind address 127.0.0.1) Press Ctrl+C to stop Ctrl+C即可进入预览页面http://localhost:1313/，在本地的md文档中随意编辑或添加新内容，只需在浏览器中刷新即可快速查看更改\n  自定义主题 对网站进行一些配置,在文本编辑器中打开config.toml\nbaseURL = \u0026quot;https://example.org/\u0026quot; languageCode = \u0026quot;en-us\u0026quot; title = \u0026quot;My New Hugo Site\u0026quot; theme = \u0026quot;ananke\u0026quot; 其中:\nlanguageCode = \u0026quot;zh-Hans\u0026quot; 网站语言设置为中文\ntitle和theme可以自行更改,更多主题请访问https://themes.gohugo.io/\n  建立静态页面 $ hugo -D 此时在quickstart下面会生成一个public文件夹,表示搭建成功\n  完结撒花 之后你就能通过git和Github完成个人博客的修改以及上传啦\n  "
-    }
-,
-    {
         "ref": "http://dongshuaizhi.top/blog/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/",
         "title": "开博大吉",
         "section": "blog",
