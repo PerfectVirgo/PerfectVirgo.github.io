@@ -37,7 +37,7 @@
 <meta itemprop="description" content="1. 视口完整写法 &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no&#34;&gt; 2. CSS 初始化（仅供参考） * { margin: 0; padding: 0; box-sizing: border-box; } *::before, *::after { box-sizing: border-box; } body, button, input, select, textarea { -webkit-font-smoothing: antialiased; font: 12px/1.5 &#39;Microsoft YaHei&#39;, tahoma, arial, &#39;Hiragino Sans GB&#39;, &#39;\5b8b\4f53&#39;, sans-serif; /* 需更改 */ background-color: #666; } h1, h2, h3,">
 <meta itemprop="datePublished" content="2020-04-05T21:57:30&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-05T21:57:30&#43;08:00" />
-<meta itemprop="wordCount" content="2111">
+<meta itemprop="wordCount" content="2123">
 
 
 
@@ -430,38 +430,39 @@
 </code></pre></div><p><img src="http://dongshuaizhi.top/images/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%803.gif" alt=""></p>
 </li>
 </ul>
-<h2 id="7-绝对固定定位且宽度不固定的盒子水平居中">7. 绝对、固定定位且宽度不固定的盒子水平居中</h2>
+<h2 id="7-绝对固定定位且宽高不固定的盒子水平垂直居中">7. 绝对、固定定位且宽高不固定的盒子水平垂直居中</h2>
 <p>html 结构均如下：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
 </code></pre></div><ul>
 <li>
-<p>核心：<code>left: 0;  right: 0;  margin: 0 auto;</code></p>
+<p>核心：<code>left: 0;  right: 0;  top: 0;  bottom: 0;  margin: auto;</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">box</span> {
     <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
     <span style="color:#75715e">/* position: fixed; */</span>
     <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">0</span>;
     <span style="color:#66d9ef">right</span>: <span style="color:#ae81ff">0</span>;
     <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">auto</span>;
+    <span style="color:#66d9ef">bottom</span>: <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">margin</span>: <span style="color:#66d9ef">auto</span>;
     <span style="color:#66d9ef">max-width</span>: <span style="color:#ae81ff">980</span><span style="color:#66d9ef">px</span>;
     <span style="color:#66d9ef">min-width</span>: <span style="color:#ae81ff">320</span><span style="color:#66d9ef">px</span>;
     <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
-    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
 }
 </code></pre></div></li>
 <li>
-<p>核心：<code>left: 50%;  transform: translate(-50%);</code></p>
+<p>核心：<code>left: 50%;  top: 50%;  transform: translate(-50%, -50%);</code></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">box</span> {
     <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
     <span style="color:#75715e">/* position: fixed; */</span>
     <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
-    <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
     <span style="color:#66d9ef">max-width</span>: <span style="color:#ae81ff">980</span><span style="color:#66d9ef">px</span>;
     <span style="color:#66d9ef">min-width</span>: <span style="color:#ae81ff">320</span><span style="color:#66d9ef">px</span>;
     <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
-    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">200</span><span style="color:#66d9ef">px</span>;
-    <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">-50</span><span style="color:#66d9ef">%</span>);
-    <span style="color:#75715e">/* 也是向左移动当前元素宽度的一半 */</span>
+    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>;
+    <span style="color:#66d9ef">transform</span>: translate(<span style="color:#ae81ff">-50</span><span style="color:#66d9ef">%</span>, <span style="color:#ae81ff">-50</span><span style="color:#66d9ef">%</span>);
+    <span style="color:#75715e">/* 也是向左向上移动当前元素宽度的一半 */</span>
 }
 </code></pre></div></li>
 </ul>
