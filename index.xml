@@ -2,146 +2,146 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>董帅志的小窝</title>
-    <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/</link>
+    <link>https://example.org/</link>
     <description>Recent content on 董帅志的小窝</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 12 Apr 2020 01:37:57 +0800</lastBuildDate>
     
-	<atom:link href="https://github.com/PerfectVirgo/perfectvirgo.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>JS对象分类</title>
-      <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/17-js%E5%AF%B9%E8%B1%A1%E5%88%86%E7%B1%BB/</link>
+      <link>https://example.org/blog/17-js%E5%AF%B9%E8%B1%A1%E5%88%86%E7%B1%BB/</link>
       <pubDate>Sun, 12 Apr 2020 01:37:57 +0800</pubDate>
       
-      <guid>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/17-js%E5%AF%B9%E8%B1%A1%E5%88%86%E7%B1%BB/</guid>
+      <guid>https://example.org/blog/17-js%E5%AF%B9%E8%B1%A1%E5%88%86%E7%B1%BB/</guid>
       <description>对象需要分类吗 这是一个值得思考的问题 我们来做一个小程序 输出各种形状的面积和周长 正方形 代码 let square = { width: 5, getArea: function () { return this.width * this.width; }, getLength: function () { return this.width * 4; } } 分</description>
     </item>
     
     <item>
       <title>JS对象基本用法</title>
-      <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/16-js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</link>
+      <link>https://example.org/blog/16-js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</link>
       <pubDate>Sat, 11 Apr 2020 01:37:57 +0800</pubDate>
       
-      <guid>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/16-js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
+      <guid>https://example.org/blog/16-js%E5%AF%B9%E8%B1%A1%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</guid>
       <description>1. 对象 定义 无序的数据集合 键值对的集合 写法 let obj = { &#39;name&#39;: &#39;frank&#39;, &#39;age&#39;: 18 } let obj = new Object({ &#39;name&#39;: &#39;frank&#39; }) console.log({ &#39;name&#39;: &#39;frank&#39;, &#39;age&#39;: 18 }) 细节 键名是字符串，不是标识符（标识符不能以数字开头），</description>
     </item>
     
     <item>
       <title>数据类型和运算符</title>
-      <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/15-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <link>https://example.org/blog/15-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
       <pubDate>Fri, 10 Apr 2020 01:37:57 +0800</pubDate>
       
-      <guid>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/15-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <guid>https://example.org/blog/15-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
       <description>1. 数字与字符串 都是一，为什么要分 1 和 &amp;lsquo;1&amp;rsquo; 功能不同 数字是数字，字符串是字符串，要严谨 数字能加减乘除，字符串不行 字符串能表示电话号码，数字不行 存储</description>
     </item>
     
     <item>
       <title>JS语法</title>
-      <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/14-js%E8%AF%AD%E6%B3%95/</link>
+      <link>https://example.org/blog/14-js%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Thu, 09 Apr 2020 01:37:57 +0800</pubDate>
       
-      <guid>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/14-js%E8%AF%AD%E6%B3%95/</guid>
+      <guid>https://example.org/blog/14-js%E8%AF%AD%E6%B3%95/</guid>
       <description>1. JS 版本 ES 6 是最低要求 历史版本 ES 3，IE 6 支持，总体评价：垃圾 ES 5，总体评价：还是垃圾 ES 6，大部分浏览器支持，总体评价：一半垃圾一半好 ES 2019 与</description>
     </item>
     
     <item>
       <title>内存图与JS世界</title>
-      <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/13-%E5%86%85%E5%AD%98%E5%9B%BE%E4%B8%8Ejs%E4%B8%96%E7%95%8C/</link>
+      <link>https://example.org/blog/13-%E5%86%85%E5%AD%98%E5%9B%BE%E4%B8%8Ejs%E4%B8%96%E7%95%8C/</link>
       <pubDate>Wed, 08 Apr 2020 01:37:57 +0800</pubDate>
       
-      <guid>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/13-%E5%86%85%E5%AD%98%E5%9B%BE%E4%B8%8Ejs%E4%B8%96%E7%95%8C/</guid>
+      <guid>https://example.org/blog/13-%E5%86%85%E5%AD%98%E5%9B%BE%E4%B8%8Ejs%E4%B8%96%E7%95%8C/</guid>
       <description>1. 操作系统常识 一切都运行在内存里 开机 操作系统在 C 盘里（macOS 的在根目录下多个目录里） 当你按下开机键，主板通电，开始读取固件 固件就是固定在</description>
     </item>
     
     <item>
       <title>JS概述</title>
-      <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/12-js%E6%A6%82%E8%BF%B0/</link>
+      <link>https://example.org/blog/12-js%E6%A6%82%E8%BF%B0/</link>
       <pubDate>Tue, 07 Apr 2020 01:37:57 +0800</pubDate>
       
-      <guid>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/12-js%E6%A6%82%E8%BF%B0/</guid>
+      <guid>https://example.org/blog/12-js%E6%A6%82%E8%BF%B0/</guid>
       <description>1. JavaScript 的诞生 布莱登临危受命 公司要求给浏览器添加一个脚本功能 公司要求这个脚本必须蹭 Java 的流量 布莱登花十天设计了 JS 的最初版本（不是实现） JS 的命名 Mocha 摩</description>
     </item>
     
     <item>
       <title>浅析URL</title>
-      <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/11-%E6%B5%85%E6%9E%90url/</link>
+      <link>https://example.org/blog/11-%E6%B5%85%E6%9E%90url/</link>
       <pubDate>Mon, 06 Apr 2020 17:13:57 +0800</pubDate>
       
-      <guid>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/11-%E6%B5%85%E6%9E%90url/</guid>
+      <guid>https://example.org/blog/11-%E6%B5%85%E6%9E%90url/</guid>
       <description>1. IP Internet Protocal主要约定了两件事： 如何定位一台设备 如何封装数据报文，以跟其他设备交流 只要你在互联网中，你就有至少一个独特的 IP IP 分为内网</description>
     </item>
     
     <item>
       <title>CSS常见问题汇总</title>
-      <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/10-css%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
+      <link>https://example.org/blog/10-css%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
       <pubDate>Sun, 05 Apr 2020 21:57:30 +0800</pubDate>
       
-      <guid>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/10-css%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
+      <guid>https://example.org/blog/10-css%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
       <description>1. 视口完整写法 &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no&amp;#34;&amp;gt; 2. CSS 初始化（仅供参考） * { margin: 0; padding: 0; box-sizing: border-box; } *::before, *::after { box-sizing: border-box; } body, button, input, select, textarea { -webkit-font-smoothing: antialiased; font: 12px/1.5 &amp;#39;Microsoft YaHei&amp;#39;, tahoma, arial, &amp;#39;Hiragino Sans GB&amp;#39;, &amp;#39;\5b8b\4f53&amp;#39;, sans-serif; /* 需更改 */ background-color: #666; } h1, h2, h3,</description>
     </item>
     
     <item>
       <title>CSS动画</title>
-      <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/09-css%E5%8A%A8%E7%94%BB/</link>
+      <link>https://example.org/blog/09-css%E5%8A%A8%E7%94%BB/</link>
       <pubDate>Sun, 05 Apr 2020 20:57:30 +0800</pubDate>
       
-      <guid>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/09-css%E5%8A%A8%E7%94%BB/</guid>
+      <guid>https://example.org/blog/09-css%E5%8A%A8%E7%94%BB/</guid>
       <description>1. 动画 定义 由许多静止的画面（帧） 以一定的速度（如每秒30张）连续播放时 肉眼因视觉残象产生错觉 而误以为是活动的画面 概念 帧：每个静止的画面都叫做</description>
     </item>
     
     <item>
       <title>CSS定位</title>
-      <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/08-css%E5%AE%9A%E4%BD%8D/</link>
+      <link>https://example.org/blog/08-css%E5%AE%9A%E4%BD%8D/</link>
       <pubDate>Sun, 05 Apr 2020 20:56:45 +0800</pubDate>
       
-      <guid>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/08-css%E5%AE%9A%E4%BD%8D/</guid>
+      <guid>https://example.org/blog/08-css%E5%AE%9A%E4%BD%8D/</guid>
       <description>1. 盒模型 Q：背景的范围是从哪到哪？（B） A. border 内边沿围成的区域 B. border 外边沿围成的区域 如何验证自己的猜想？border 半透明试试 Q：从左边看一个 d</description>
     </item>
     
     <item>
       <title>CSS布局</title>
-      <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/07-css%E5%B8%83%E5%B1%80/</link>
+      <link>https://example.org/blog/07-css%E5%B8%83%E5%B1%80/</link>
       <pubDate>Sun, 05 Apr 2020 20:55:55 +0800</pubDate>
       
-      <guid>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/07-css%E5%B8%83%E5%B1%80/</guid>
+      <guid>https://example.org/blog/07-css%E5%B8%83%E5%B1%80/</guid>
       <description>1. 布局分类 两种 固定宽度布局，一般宽度为 960 / 1000 / 1024 px 不固定宽度布局，主要靠文档流的原理来布局 还记得吗 文档流本来就是自适应的，不需要加额外的样式</description>
     </item>
     
     <item>
       <title>CSS概述</title>
-      <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/06-css%E6%A6%82%E8%BF%B0/</link>
+      <link>https://example.org/blog/06-css%E6%A6%82%E8%BF%B0/</link>
       <pubDate>Sun, 05 Apr 2020 20:52:22 +0800</pubDate>
       
-      <guid>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/06-css%E6%A6%82%E8%BF%B0/</guid>
+      <guid>https://example.org/blog/06-css%E6%A6%82%E8%BF%B0/</guid>
       <description>1. CSS层叠样式表，层叠指什么？ 样式层叠 可以多次对同一选择器进行样式声明 选择器层叠 可以用不同选择器对同一个元素进行样式声明 文件层叠 可以用多个</description>
     </item>
     
     <item>
       <title>HTML重点标签</title>
-      <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/05-html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
+      <link>https://example.org/blog/05-html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
       <pubDate>Thu, 02 Apr 2020 18:17:23 +0800</pubDate>
       
-      <guid>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/05-html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
+      <guid>https://example.org/blog/05-html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
       <description>1. a 标签的用法 href 取值： 网址 https://google.com http://google.com //google.com 最高级，它会自动选择是用https还是http 路径 /a/b/c 以及 a/b/c 注意绝对路径开头的/是指http-server的根</description>
     </item>
     
     <item>
       <title>HTML概述</title>
-      <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/04-html%E6%A6%82%E8%BF%B0/</link>
+      <link>https://example.org/blog/04-html%E6%A6%82%E8%BF%B0/</link>
       <pubDate>Thu, 02 Apr 2020 02:09:12 +0800</pubDate>
       
-      <guid>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/04-html%E6%A6%82%E8%BF%B0/</guid>
+      <guid>https://example.org/blog/04-html%E6%A6%82%E8%BF%B0/</guid>
       <description>1. HTML历史 HTML是在1990年左右诞生,由英国人Tim Berners-Lee发明，与此同时他还发明了HTTP和URL，与HTML共同组</description>
     </item>
     
     <item>
       <title>开博大吉</title>
-      <link>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
+      <link>https://example.org/blog/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
       <pubDate>Wed, 01 Apr 2020 00:03:54 +0800</pubDate>
       
-      <guid>https://github.com/PerfectVirgo/perfectvirgo.github.io/blog/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
+      <guid>https://example.org/blog/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
       <description>大家好，我的博客开通啦！</description>
     </item>
     
