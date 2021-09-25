@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>
+      
+          JS对象分类 - 董帅志的小窝
+      
+  </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="董帅志" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://github.com/PerfectVirgo/img/favicon.ico">
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://github.com/PerfectVirgo/style.min.6f642c5866835106e8a19b94463576436c99be9e41a8714ab3df3daa95f6bf90.css" integrity="sha256-b2QsWGaDUQbooZuURjV2Q2yZvp5BqHFKs989qpX2v5A=">
+  
+  
+  
+  <link rel="stylesheet" href="https://github.com/PerfectVirgo/style-dark.min.0a647fb6c07e04b77b54fa0515d0a683d39ecdb251dba960fe1f966f7ff36fc2.css" media="(prefers-color-scheme: dark)" integrity="sha256-CmR/tsB&#43;BLd7VPoFFdCmg9OezbJR26lg/h&#43;Wb3/zb8I=">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  
+  
+
+  <meta property="og:title" content="JS对象分类" />
+<meta property="og:description" content="对象需要分类吗 这是一个值得思考的问题 我们来做一个小程序 输出各种形状的面积和周长 正方形 代码 let square = { width: 5, getArea: function () { return this.width * this.width; }, getLength: function () { return this.width * 4; } } 分" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://github.com/PerfectVirgo/blog/17-js%E5%AF%B9%E8%B1%A1%E5%88%86%E7%B1%BB/" />
+<meta property="article:published_time" content="2020-04-12T01:37:57+08:00" />
+<meta property="article:modified_time" content="2020-04-12T01:37:57+08:00" />
+<meta itemprop="name" content="JS对象分类">
+<meta itemprop="description" content="对象需要分类吗 这是一个值得思考的问题 我们来做一个小程序 输出各种形状的面积和周长 正方形 代码 let square = { width: 5, getArea: function () { return this.width * this.width; }, getLength: function () { return this.width * 4; } } 分">
+<meta itemprop="datePublished" content="2020-04-12T01:37:57&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-12T01:37:57&#43;08:00" />
+<meta itemprop="wordCount" content="2698">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:image" content="https://github.com/PerfectVirgo//img/avatar.jpg"/>
+<meta name="twitter:title" content="JS对象分类"/>
+<meta name="twitter:description" content="对象需要分类吗 这是一个值得思考的问题 我们来做一个小程序 输出各种形状的面积和周长 正方形 代码 let square = { width: 5, getArea: function () { return this.width * this.width; }, getLength: function () { return this.width * 4; } } 分"/>
+
+  <!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <![endif]-->
+
+  </head>
+
+  <body>
+    
+  <h1>JS对象分类</h1>
+  <header>
+  
+  <div class="avatar">
+    <img class="avatarMask" src="https://github.com/PerfectVirgo//img/avatar.jpg" alt="">
+    <a href="https://github.com/PerfectVirgo/"><img class="avatar-border" src="https://github.com/PerfectVirgo//img/avatar-border.svg" alt=""></a>
+  </div>
+  
+  <h2><a class="author" href="https://github.com/PerfectVirgo/">董帅志</a></h2>
+</header>
+
+  
+  
+  
+  <p class="date">April 12, 2020</p>
+  
+  
+  
+  
+  <div id="contentBody">
+    <ul>
+<li>
+<p>对象需要分类吗</p>
+<p>这是一个值得思考的问题</p>
+</li>
+<li>
+<p>我们来做一个小程序</p>
+<p>输出各种形状的面积和周长</p>
+</li>
+<li>
+<p>正方形</p>
+<ul>
+<li>
+<p>代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">square</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+    <span style="color:#a6e22e">getArea</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+    },
+    <span style="color:#a6e22e">getLength</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+    }
+}
+</code></pre></div></li>
+<li>
+<p>分析</p>
+<p>正方形拥有三个属性：边长、面积、周长</p>
+</li>
+</ul>
+</li>
+<li>
+<p>给我来一打正方形</p>
+<p>这样写代码的，要么是新人，要么是傻子</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">square</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+    <span style="color:#a6e22e">getArea</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+    },
+    <span style="color:#a6e22e">getLength</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+    }
+};
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">square2</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">6</span>,
+    <span style="color:#a6e22e">getArea</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+    },
+    <span style="color:#a6e22e">getLength</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+    }
+};
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">square3</span> <span style="color:#f92672">=</span> {...};
+</code></pre></div></li>
+<li>
+<p>简单，用循环搞定</p>
+<p>for 循环</p>
+</li>
+<li>
+<p>不就是 12 个对象嘛</p>
+<ul>
+<li>
+<p>代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">squareList</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">12</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#a6e22e">squareList</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> {
+        <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+        <span style="color:#a6e22e">getArea</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+        },
+        <span style="color:#a6e22e">getLength</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+        }
+    }
+}
+</code></pre></div></li>
+<li>
+<p>看，搞定了</p>
+<p>width 不全是 5 啊，怎么办</p>
+</li>
+</ul>
+</li>
+<li>
+<p>好办</p>
+<ul>
+<li>
+<p>代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">squareList</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">widthList</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>];
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">12</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#a6e22e">squareList</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> {
+        <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">widthList</span>[<span style="color:#a6e22e">i</span>],
+        <span style="color:#a6e22e">getArea</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+        },
+        <span style="color:#a6e22e">getLength</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+        }
+    }
+}
+</code></pre></div></li>
+<li>
+<p>看，又搞定了</p>
+<p>垃圾代码，浪费了太多内存，自己画内存图就知道了</p>
+</li>
+</ul>
+</li>
+<li>
+<p>内存图：重复的函数</p>
+<p><img src="C:%5CUsers%5C13205%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200717211038876.png" alt="image-20200717211038876"></p>
+</li>
+<li>
+<p>所以你看，你的代码很垃圾</p>
+<p>继续改</p>
+</li>
+<li>
+<p>借助原型</p>
+<p>将 12 个对象的共用属性放到原型里</p>
+</li>
+<li>
+<p>好办</p>
+<ul>
+<li>
+<p>代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">squareList</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">widthList</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">squarePrototype</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">getArea</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+    },
+    <span style="color:#a6e22e">getLength</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+    }
+};
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">12</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#a6e22e">squareList</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">squarePrototype</span>);
+    <span style="color:#a6e22e">squareList</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">widthList</span>[<span style="color:#a6e22e">i</span>];
+}
+</code></pre></div></li>
+<li>
+<p>看，双搞定了</p>
+<p>还是垃圾代码！你创建的 square 的代码太分散了！</p>
+</li>
+</ul>
+</li>
+<li>
+<p>太分散了吗</p>
+<p>那就把代码抽离到一个函数里，然后调用函数</p>
+</li>
+<li>
+<p>抽离到函数</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">squareList</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">widthList</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>];
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createSquare</span>(<span style="color:#a6e22e">width</span>) {  <span style="color:#75715e">// 此函数叫做构造函数
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">squarePrototype</span>);   
+    <span style="color:#75715e">// 以 squarePrototype 为原型创建空对象
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">width</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">obj</span>;
+}
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">squarePrototype</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">getArea</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+    },
+    <span style="color:#a6e22e">getLength</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+    }
+};
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">12</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#a6e22e">squareList</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">createSquare</span>(<span style="color:#a6e22e">widthList</span>[<span style="color:#a6e22e">i</span>]); 
+    <span style="color:#75715e">// 这下创建 square 很简单了吧！
+</span><span style="color:#75715e"></span>}
+</code></pre></div></li>
+<li>
+<p>squarePrototype 原型和 createSquare 函数还是分散的</p>
+<p>能不能组合在一起</p>
+</li>
+<li>
+<p>函数和原型结合</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">squareList</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">widthList</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>];
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createSquare</span>(<span style="color:#a6e22e">width</span>) {  	<span style="color:#75715e">// 此函数叫做构造函数
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">createSquare</span>.<span style="color:#a6e22e">squarePrototype</span>);	<span style="color:#75715e">// 先使用后定义？NO
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">width</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">obj</span>;
+}
+<span style="color:#a6e22e">createSquare</span>.<span style="color:#a6e22e">squarePrototype</span> <span style="color:#f92672">=</span> {    <span style="color:#75715e">// 把原型放到函数上，结合够紧密了吗？
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">constructor</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">createSquare</span>,  	<span style="color:#75715e">// 方便通过原型找到构造函数
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">getArea</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+    },
+    <span style="color:#a6e22e">getLength</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+    }
+};
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">12</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#a6e22e">squareList</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">createSquare</span>(<span style="color:#a6e22e">widthList</span>[<span style="color:#a6e22e">i</span>]);
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">squareList</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">constructor</span>); 
+    <span style="color:#75715e">// constructor 可以知道谁构造了这个对象：你妈是谁？
+</span><span style="color:#75715e"></span>}
+</code></pre></div></li>
+<li>
+<p>这段代码几乎完美</p>
+<p>为什么不固定下来，让每个 JS 开发者直接用呢</p>
+</li>
+<li>
+<p>new 操作符</p>
+<p>让我们感受 JS 之父的爱</p>
+</li>
+<li>
+<p>函数和原型结合（重写）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">squareList</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">widthList</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>];
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Square</span>(<span style="color:#a6e22e">width</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">width</span>;
+}
+<span style="color:#a6e22e">Square</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">getArea</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+}
+<span style="color:#a6e22e">Square</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">getLength</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+}
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">12</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#a6e22e">squareList</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Square</span>(<span style="color:#a6e22e">widthList</span>[<span style="color:#a6e22e">i</span>]);
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">squareList</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">constructor</span>);
+}
+<span style="color:#75715e">// 多美，几乎没有一句多余的废话
+</span><span style="color:#75715e">// 每个函数都有 prototype 属性，这是 JS 之父故意的
+</span><span style="color:#75715e">// 每个 prototype 都有 constructor 属性，也是故意的
+</span></code></pre></div></li>
+<li>
+<p>对比</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createSquare</span>(<span style="color:#a6e22e">width</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">createSquare</span>.<span style="color:#a6e22e">squarePrototype</span>);
+    <span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">width</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">obj</span>;
+}
+<span style="color:#a6e22e">createSquare</span>.<span style="color:#a6e22e">squarePrototype</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">constructor</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">createSquare</span>,
+    <span style="color:#a6e22e">getArea</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+    },
+    <span style="color:#a6e22e">getLength</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+    }
+};
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">square</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createSquare</span>(<span style="color:#ae81ff">5</span>);
+</code></pre></div><p>上面的代码被简化为下面的代码唯一的区别是要用 new 来调用</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Square</span>(<span style="color:#a6e22e">width</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">width</span>;
+}
+<span style="color:#a6e22e">Square</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">getArea</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+}
+<span style="color:#a6e22e">Square</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">getLength</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+}
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">square</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Square</span>(<span style="color:#ae81ff">5</span>);
+</code></pre></div></li>
+<li>
+<p>总结</p>
+<ul>
+<li>
+<p>new X() 自动做了四件事情</p>
+<p>自动创建空对象</p>
+<p>自动为空对象关联原型，原型地址指定为 X.prototype</p>
+<p>自动将空对象作为 this 关键字运行构造函数</p>
+<p>自动 return this</p>
+<p>——这就是 JS 之父的爱</p>
+</li>
+<li>
+<p>构造函数 X</p>
+<p>X 函数本身负责给对象本身添加属性</p>
+<p>X.prototype 对象负责保存对象的共用属性</p>
+</li>
+</ul>
+</li>
+<li>
+<p>题外话：代码规范</p>
+<ul>
+<li>
+<p>大小写</p>
+<p>所有构造函数（专门用于创建对象的函数）首字母大写</p>
+<p>所有被构造出来的对象，首字母小写</p>
+</li>
+<li>
+<p>词性</p>
+<p>new 后面的函数，使用名词形式，如 new Person()、new Object()</p>
+<p>其他函数，一般使用动词开头，如 createSquare(5)、createElement(&lsquo;div&rsquo;)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>接下来总结一个重要的公式</p>
+<p>也是 JS 里唯一的一个公式</p>
+</li>
+<li>
+<p>如何确定一个对象的原型</p>
+<ul>
+<li>
+<p>为什么</p>
+<p>let obj = new Object() 的原型是 Object.prototype</p>
+<p>let arr = new Array() 的原型是 Array.prototype</p>
+<p>let square = new Square() 的原型是 Square.prototype</p>
+<p>let fn = new Function() 的原型是 Function.prototype</p>
+</li>
+<li>
+<p>因为 new 操作故意这么做的</p>
+<p><img src="C:%5CUsers%5C13205%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200718233712672.png" alt="image-20200718233712672"></p>
+</li>
+</ul>
+</li>
+<li>
+<p>结论</p>
+<p>你是谁构造的，你的原型就是谁的 prototype 属性对应的对象</p>
+</li>
+<li>
+<p>原型公式</p>
+<p>对象.__proto__ === 其构造函数.prototype</p>
+</li>
+<li>
+<p>来做几个题</p>
+<p>看看你理解这个公式了吗</p>
+</li>
+<li>
+<p>难度 1</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> {};
+</code></pre></div><p>请问：</p>
+<ol>
+<li>
+<p>x 的原型是什么？Object.prototype</p>
+</li>
+<li>
+<p>x.__proto__ 的值是什么？Object.prototype</p>
+</li>
+<li>
+<p>上面两个问题是等价的吗？是</p>
+</li>
+<li>
+<p>请用内存图画出 x 的所有属性</p>
+<p><img src="C:%5CUsers%5C13205%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200719000511828.png" alt="image-20200719000511828"></p>
+</li>
+</ol>
+</li>
+<li>
+<p>难度 2</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">square</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Square</span>(<span style="color:#ae81ff">5</span>);
+</code></pre></div><p>请问：</p>
+<ol>
+<li>square 的原型是什么？Square.prototype</li>
+<li>square.__proto__ 的值是什么？Square.prototype</li>
+<li>请用内存图画出 x 的所有属性</li>
+</ol>
+</li>
+<li>
+<p>难度 3</p>
+<p>请问：</p>
+<ol>
+<li>Object.prototype 是哪个函数构造出来的？不知道</li>
+<li>Object.prototype 的原型是什么？没有原型</li>
+<li>Object.prototype.__proto__？null</li>
+<li>请用内存图画出上述内容</li>
+</ol>
+</li>
+<li>
+<p>构造函数、prototype、new</p>
+<p>我们已经通过 Square 理解了</p>
+</li>
+<li>
+<p>Square 最终版（存疑）</p>
+<ul>
+<li>
+<p>代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Square</span>(<span style="color:#a6e22e">width</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">width</span>;
+}
+<span style="color:#a6e22e">Square</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">getArea</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+}
+<span style="color:#a6e22e">Square</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">getLength</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+}
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">square</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Square</span>(<span style="color:#ae81ff">5</span>);
+<span style="color:#a6e22e">square</span>.<span style="color:#a6e22e">width</span>
+<span style="color:#a6e22e">square</span>.<span style="color:#a6e22e">getArea</span>()
+<span style="color:#a6e22e">square</span>.<span style="color:#a6e22e">getLength</span>()
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>正方形搞定了，再给我画个圆呗</p>
+<p>甲方爸爸总是会提出新(wu)的(li)需求</p>
+</li>
+<li>
+<p>Circle</p>
+<ul>
+<li>
+<p>代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Circle</span>(<span style="color:#a6e22e">radius</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">radius</span>;
+}
+<span style="color:#a6e22e">Circle</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">getArea</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+    <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">pow</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span>, <span style="color:#ae81ff">2</span>) <span style="color:#f92672">*</span> Math.<span style="color:#a6e22e">PI</span>;
+}
+<span style="color:#a6e22e">Circle</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">getLength</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> Math.<span style="color:#a6e22e">PI</span>;
+}
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">circle</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Circle</span>(<span style="color:#ae81ff">5</span>);
+<span style="color:#a6e22e">circle</span>.<span style="color:#a6e22e">radius</span>
+<span style="color:#a6e22e">circle</span>.<span style="color:#a6e22e">getArea</span>()
+<span style="color:#a6e22e">circle</span>.<span style="color:#a6e22e">getLength</span>()
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>圆搞定了，再给我写个长方形呗</p>
+<p>甲方爸爸总是会提出新(wu)的(li)需求</p>
+</li>
+<li>
+<p>Rectangle</p>
+<ul>
+<li>
+<p>代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Rect</span>(<span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">height</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">width</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">height</span>;
+}
+<span style="color:#a6e22e">Rect</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">getArea</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span>;
+}
+<span style="color:#a6e22e">Rect</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">getLength</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+    <span style="color:#66d9ef">return</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;
+}
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">rect</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Rect</span>(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>);
+<span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">width</span>
+<span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">height</span>
+<span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">getArea</span>()
+<span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">getLength</span>()
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>对象需要分类吗</p>
+<p>再次回到开头的问题</p>
+</li>
+<li>
+<p>需要分类</p>
+<ul>
+<li>
+<p>理由一</p>
+<p>有很多对象拥有一样的属性和行为</p>
+<p>需要把它们分为同一类</p>
+<p>如 square1 和 square2</p>
+<p>这样创建类似对象的时候就很方便</p>
+</li>
+<li>
+<p>理由二</p>
+<p>但是还有很多对象拥有其他的属性和行为</p>
+<p>所以就需要不同的分类</p>
+<p>比如 Square / Circle / Rect 就是不同的分类</p>
+<p>Array / Function 也是不同的分类</p>
+<p>而 Object 创建出来的对象，是最没有特点的对象</p>
+</li>
+</ul>
+</li>
+<li>
+<p>类型 V.S. 类</p>
+<ul>
+<li>
+<p>类型</p>
+<p>类型是 JS 数据的分类，有 7 种</p>
+<p>四基两空一对象</p>
+</li>
+<li>
+<p>类</p>
+<p>类是针对于对象的分类，有无数种</p>
+<p>常见的有 Array、Function、Date、RegExp 等</p>
+</li>
+</ul>
+</li>
+<li>
+<p>数组对象</p>
+<ul>
+<li>
+<p>定义一个数组</p>
+<p>let arr = [1, 2, 3]</p>
+<p>let arr = new Array(1, 2, 3)	// 元素为 1, 2, 3</p>
+<p>let arr = new Array(3)			// 长度为 3</p>
+</li>
+<li>
+<p>数组对象的自身属性</p>
+<p>&lsquo;0&rsquo; / &lsquo;1&rsquo; / &lsquo;2&rsquo; / &lsquo;length&rsquo;</p>
+<p>注意，属性名没有数字，只有字符串</p>
+</li>
+<li>
+<p>数组对象的共用属性</p>
+<p>&lsquo;push&rsquo; / &lsquo;pop&rsquo; / &lsquo;shift&rsquo; / &lsquo;unshift&rsquo; / &lsquo;join&rsquo;</p>
+<p>其实就是英语小课堂啦，用法都在 MDN</p>
+</li>
+</ul>
+</li>
+<li>
+<p>函数对象</p>
+<ul>
+<li>
+<p>定义一个函数</p>
+<p>function fn(x, y) {return x + y}</p>
+<p>let fn2 = function fn(x, y) {return x + y}</p>
+<p>let fn = (x, y) =&gt; x + y</p>
+<p>let fn = new Function(&lsquo;x&rsquo;, &lsquo;y&rsquo;, &lsquo;return x + y&rsquo;)</p>
+</li>
+<li>
+<p>函数对象自身属性</p>
+<p>&lsquo;name&rsquo; / &lsquo;length&rsquo;(形参个数)</p>
+</li>
+<li>
+<p>函数对象共用属性</p>
+<p>&lsquo;call&rsquo; / &lsquo;apply&rsquo; / &lsquo;bind&rsquo;</p>
+</li>
+</ul>
+</li>
+<li>
+<p>JS 终极一问</p>
+<ul>
+<li>
+<p>window 是谁构造的</p>
+<p>Window</p>
+<p>可以通过 constructor 属性看出构造者</p>
+<p>window.__proto__ === Window.prototype</p>
+</li>
+<li>
+<p>window.Object 是谁构造的</p>
+<p>window.Function</p>
+<p>因为所有函数都是 window.Function 构造的</p>
+<p>window.Object.constructor === window.Function</p>
+</li>
+<li>
+<p>window.Function 是谁构造的</p>
+<p>window.Function</p>
+<p>因为所有函数都是 window.Function 构造的</p>
+<p>window.Function.constructor === window.Function</p>
+<p>自己构造的自己？并不是这样，这是【上帝】的安排</p>
+<p>浏览器构造了 Function，然后指定它的构造者是自己</p>
+</li>
+</ul>
+</li>
+<li>
+<p>非常遗憾，这个代码被某些前端认为是过时的</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Square</span>(<span style="color:#a6e22e">width</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">width</span>;
+}
+<span style="color:#a6e22e">Square</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">getArea</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+}
+<span style="color:#a6e22e">Square</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">getLength</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+}
+</code></pre></div></li>
+<li>
+<p>ES6 引入了新语法</p>
+<p>class 统治天下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Square</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">width</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">width</span>;
+  }
+    <span style="color:#a6e22e">getArea</span>() {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+  }
+  <span style="color:#a6e22e">getLength</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+  }	<span style="color:#75715e">// 这种写法报错
+</span><span style="color:#75715e"></span>}
+</code></pre></div></li>
+<li>
+<p>class 语法引入了更多概念</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Square</span> {
+    <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+  <span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">width</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">width</span>;
+  }
+    <span style="color:#a6e22e">getArea</span>() {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+  }
+  <span style="color:#a6e22e">getLength</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;
+  }	<span style="color:#75715e">// 这种写法报错
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">area2</span>() {	<span style="color:#75715e">// 只读属性
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span>;
+    }
+}
+</code></pre></div></li>
+<li>
+<p>用 class 重写 Circle</p>
+<p>代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Circle</span> {
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">radius</span>) {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">radius</span>;
+    }
+    <span style="color:#a6e22e">getArea</span>() {
+        <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">pow</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span>, <span style="color:#ae81ff">2</span>) <span style="color:#f92672">*</span> Math.<span style="color:#a6e22e">PI</span>;
+  }
+    <span style="color:#a6e22e">getLength</span>() {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">radius</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> Math.<span style="color:#a6e22e">PI</span>;
+    }
+}
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">circle</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Circle</span>(<span style="color:#ae81ff">5</span>);
+<span style="color:#a6e22e">circle</span>.<span style="color:#a6e22e">radius</span>
+<span style="color:#a6e22e">circle</span>.<span style="color:#a6e22e">getArea</span>()
+<span style="color:#a6e22e">circle</span>.<span style="color:#a6e22e">getLength</span>()
+</code></pre></div></li>
+<li>
+<p>用 class 重写 Rect</p>
+<ul>
+<li>
+<p>代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Rect</span> {
+    <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">height</span>) {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">width</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">height</span>;
+    }
+    <span style="color:#a6e22e">getArea</span>() {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span>;
+    }
+    <span style="color:#a6e22e">getLength</span>() {
+        <span style="color:#66d9ef">return</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>;
+    }
+}
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">rect</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Rect</span>(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>);
+<span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">width</span>
+<span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">height</span>
+<span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">getArea</span>()
+<span style="color:#a6e22e">rect</span>.<span style="color:#a6e22e">getLength</span>()
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>原型好，还是类好？</p>
+<p>都是用来给对象分类的</p>
+</li>
+</ul>
+
+  </div>
+  <footer>
+  <p>
+  &copy; 2020 董帅志.
+  Powered by <a href="https://gohugo.io/">Hugo</a>
+  using the <a href="https://github.com/koirand/pulp/">pulp</a> theme.
+  </p>
+</footer>
+
+
+  </body>
+</html>
